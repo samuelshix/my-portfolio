@@ -5,7 +5,7 @@ import { Popover } from "@headlessui/react";
 // Local Data
 import data from "../../data/portfolio.json";
 
-const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
+const Header = ({ handleWorkScroll, handleAboutScroll }) => {
     const router = useRouter();
     return (
         <>
@@ -28,50 +28,25 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                             </Popover.Button>
                         </div>
                         <Popover.Panel className="absolute right-0 z-10 w-11/12 p-4 bg-white shadow-md rounded-md">
-                            {!isBlog ? (
-                                <div className="grid grid-cols-1">
-                                    <Button onClick={handleWorkScroll}>
-                                        Work
-                                    </Button>
-                                    <Button onClick={handleAboutScroll}>
-                                        About
-                                    </Button>
-                                    <Button
-                                        onClick={() =>
-                                            window.open(
-                                                "mailto:samuel.li.shi@gmail.com"
-                                            )
-                                        }
-                                    >
-                                        Contact
-                                    </Button>
-                                </div>
-                            ) : (
-                                <div className="grid grid-cols-1">
-                                    <Button
-                                        onClick={() => router.push("/")}
-                                        classes="first:ml-1"
-                                    >
-                                        Home
-                                    </Button>
-                                    {data.showBlog && (
-                                        <Button
-                                            onClick={() => router.push("/blog")}
-                                        >
-                                            Blog
-                                        </Button>
-                                    )}
-                                    <Button
-                                        onClick={() =>
-                                            window.open(
-                                                "mailto:samuel.li.shi@gmail.com"
-                                            )
-                                        }
-                                    >
-                                        Contact
-                                    </Button>
-                                </div>
-                            )}
+
+                            <div className="grid grid-cols-1">
+                                <Button onClick={handleWorkScroll}>
+                                    Work
+                                </Button>
+                                <Button onClick={handleAboutScroll}>
+                                    About
+                                </Button>
+                                <Button
+                                    onClick={() =>
+                                        window.open(
+                                            "mailto:samuel.li.shi@gmail.com"
+                                        )
+                                    }
+                                >
+                                    Contact
+                                </Button>
+                            </div>
+
                         </Popover.Panel>
                     </>
                 )}
@@ -86,11 +61,6 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                 <div className="flex">
                     <Button onClick={handleWorkScroll}>Work</Button>
                     <Button onClick={handleAboutScroll}>About</Button>
-                    {data.showBlog && (
-                        <Button onClick={() => router.push("/blog")}>
-                            Blog
-                        </Button>
-                    )}
                     <Button
                         onClick={() =>
                             window.open("mailto:samuel.li.shi@gmail.com")
