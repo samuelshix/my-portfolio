@@ -149,7 +149,7 @@ export default function Home() {
                     <h1 className="tablet:m-10 text-2xl">Coursework.</h1>
                     <div className="mt-5 tablet:m-10 grid grid-cols-1 laptop:grid-cols-2 gap-6">
                         {data.courses.map((course, index) => (
-                            <h1>{course}</h1>
+                            <h1 key={index}>{course}</h1>
                         ))}
                     </div>
                     <h1 className="tablet:m-10 text-2xl">Languages:</h1>
