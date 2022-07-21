@@ -1,0 +1,88 @@
+{
+    "name": "Sam Shi",
+    "headerTaglineOne": "Hey, I'm Sam.",
+    "headerTaglineTwo": "A web developer",
+    "showBlog": false,
+    "socials": [
+        {
+            "title": "Github",
+            "link": "https://github.com/samuelshix"
+        },
+        {
+            "title": "LinkedIn",
+            "link": "https://www.linkedin.com/in/sam-shi-/"
+        },
+        {
+            "title": "Email",
+            "link": "mailto:samuel.li.shi@gmail.com"
+        }
+    ],
+    "projects": [
+        {
+            "id": "1",
+            "title": "Kashflows",
+            "description": "React, React Router, Django REST, recursive API method. Deployed to Vercel.",
+            "imageSrc": "https://i.postimg.cc/MG9BmCzh/Kashflows.png",
+            "url": "https://kashflows.vercel.app/"
+        },
+        {
+            "id": "2",
+            "title": "Crypto Threads",
+            "description": "jQuery/AJAX, ChartJS, Pandas, Django, Postgres, Deployed to Digital Ocean",
+            "imageSrc": "https://i.postimg.cc/QMZhCbww/Crypto-Threads.png",
+            "url": "https://crypto-social-sentiment-wq83w.ondigitalocean.app/"
+        },
+        {
+            "id": "3",
+            "title": "Heatmaps",
+            "description": "React, ChartJS, ChromaJS. Deployed to Vercel.",
+            "imageSrc": "https://i.postimg.cc/3JgdBkhs/Heatmaps.png",
+            "url": "https://heatmaps.vercel.app/"
+        }
+    ],
+    "services": [
+        {
+            "id": "1",
+            "title": "Talk!",
+            "description": "Lead team of 4 students in building a social media app with live chat, notification and marketplace features, within an Agile development methodology. I wrote over half the codebase, delegated tasks and set meetings, and was involved in design and implementation. Written in Python using a MySQL database."
+        },
+        {
+            "id": "2",
+            "title": "2048 AI",
+            "description": "Developed, tested and trained an AI to solve the 2048 game using Expectimax and Monte Carlo in Python among a team of 3. Implemented our own version of 2048."
+        },
+        {
+            "id": "3",
+            "title": "Java Compiler",
+            "description": "Developed Java compiler from scratch while researching type systems under Professor James Siek."
+        }
+    ],
+    "jobs": [
+        {
+            "title": "Cryptocurrency Analyst - Intellabridge",
+            "description": [
+                "• Automate Postgresql data ingestion for company analytics dashboard via Github Actions and JS API script",
+                " • Ingest, process and present blockchain data using SQL",
+                " Pandas and Excel to uncover on-chain trends",
+                " • Present data analysis for these trends on Intellabridge’s YouTube, resulting in a doubling of total view count"
+            ]
+        },
+        {
+            "title": "Data Science Intern - Prescient",
+            "description": [
+                " • Identified critical bugs within data pipeline by auditing data with S3 and AWS-CLI, improving data QA",
+                " • Find new data sources by researching API documentation and querying Snowflake via SQL, increasing the accuracy of predictive metrics and expanding Prescient’s data lake",
+                " • Update and test environment for a new version of Pachyderm, a service central to the company’s tech stack, leading to the migration of the tech stack to more efficient and higher performance computing platform"
+            ]
+        }
+    ],
+    "aboutpara": "I am an incoming senior at studying Software Engineering at Indiana University and minoring in History and Chinese. I'm excited to continue exploring the rabbit hole that is modern web development, and to use my skills to create tools which promote my passions such as blockchain technology. I love fishing, traveling, reading sci-fi novels, and I'm pro cereal before milk!",
+    "courses": [
+        "Software Engineering",
+        "Data Analysis and Mining",
+        "Artificial Intelligence",
+        "Data Structures",
+        "Intro to Software Systems",
+        "Intro to Programming"
+    ]
+}
