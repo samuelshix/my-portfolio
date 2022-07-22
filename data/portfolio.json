@@ -67,15 +67,21 @@
             ]
         },
         {
+            "title": "Web Developer - Indiana Daily Student",
+            "description": [
+                "• Develop custom-coded web pages and visualizations via Bootstrap, JS to enhance online engagement and spread community awareness, such as a breaking story about a local sexual assault case"
+            ]
+        },
+        {
             "title": "Data Science Intern - Prescient",
             "description": [
-                " • Identified critical bugs within data pipeline by auditing data with S3 and AWS-CLI, improving data QA",
+                "• Identified critical bugs within data pipeline by auditing data with S3 and AWS-CLI, improving data QA",
                 " • Find new data sources by researching API documentation and querying Snowflake via SQL, increasing the accuracy of predictive metrics and expanding Prescient’s data lake",
                 " • Update and test environment for a new version of Pachyderm, a service central to the company’s tech stack, leading to the migration of the tech stack to more efficient and higher performance computing platform"
             ]
         }
     ],
-    "aboutpara": "I am an incoming senior at studying Software Engineering at Indiana University and minoring in History and Chinese. I'm excited to continue exploring the rabbit hole that is modern web development, and to use my skills to create tools which promote my passions such as blockchain technology. I love fishing, traveling, reading sci-fi novels, and I'm pro cereal before milk!",
+    "aboutpara": "I am an incoming senior at Indiana University studying Software Engineering at Indiana University and minoring in History and Chinese. I'm excited to continue exploring the rabbit hole that is modern web development, and to use my skills to create tools which promote my passions such as blockchain technology. I love fishing, traveling, reading sci-fi novels, and I'm pro cereal before milk!",
     "courses": [
         "Software Engineering",
         "Data Analysis and Mining",
