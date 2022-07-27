@@ -96,7 +96,7 @@ export default function Home() {
                     className="mt-10 laptop:mt-30 p-2 laptop:p-0"
                     ref={workRef}
                 >
-                    <h1 className="text-2xl text-bold">Software Engineering intern at Kash:</h1>
+                    <h1 className="text-2xl"><b>Software Engineering intern at Kash</b> (sites made by me):</h1>
                     <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 gap-4">
                         {data.projects.map((project) => (
                             <WorkCard
@@ -115,11 +115,14 @@ export default function Home() {
                     </h1>
                     <div className="mt-5 tablet:m-10 grid grid-cols-1 laptop:grid-cols-2 gap-6">
                         {data.jobs.map((service, index) => (
-                            <ServiceCard
-                                key={index}
-                                name={service.title}
-                                description={service.description}
-                            />
+                            <div>
+                                <ServiceCard
+                                    key={index}
+                                    name={service.title}
+                                    description={service.description}
+                                />
+                                {service.imageURL && <a target="_blank" href={service.url}><img className="transition-all ease-out duration-300 hover:scale-105 cursor-pointer" src={service.imageURL} /></a>}
+                            </div>
                         ))}
                     </div>
                 </div>
@@ -129,11 +132,14 @@ export default function Home() {
                     </h1>
                     <div className="mt-5 tablet:m-10 grid grid-cols-1 laptop:grid-cols-2 gap-6">
                         {data.services.map((service, index) => (
-                            <ServiceCard
-                                key={index}
-                                name={service.title}
-                                description={service.description}
-                            />
+                            <div>
+                                <ServiceCard
+                                    key={index}
+                                    name={service.title}
+                                    description={service.description}
+                                />
+                                {service.imageSrc && <img className="transition-all ease-out duration-300 hover:scale-105 cursor-pointer" src={service.imageSrc} />}
+                            </div>
                         ))}
                     </div>
                 </div>
@@ -142,10 +148,10 @@ export default function Home() {
                     ref={aboutRef}
                 >
                     <h1 className="tablet:m-10 text-2xl text-bold">About.</h1>
-                    <p className="tablet:m-10 mt-2 text-xl laptop:text-3xl w-full laptop:w-3/5">
-                        {data.aboutpara}
-                    </p>
-
+                    <ul className="tablet:m-10 mt-1 text-xl laptop:text-3xl w-full laptop:w-3/5">
+                        {data.aboutpara.map((point, index) => (<li>{"• " + point}</li>))
+                        }
+                    </ul>
                     <h1 className="tablet:m-10 text-2xl">Coursework.</h1>
                     <div className="mt-5 tablet:m-10 grid grid-cols-1 laptop:grid-cols-2 gap-6">
                         {data.courses.map((course, index) => (

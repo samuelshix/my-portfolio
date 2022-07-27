@@ -43,7 +43,8 @@
         {
             "id": "1",
             "title": "Talk!",
-            "description": "Lead team of 4 students in building a social media app with live chat, notification and marketplace features, within an Agile development methodology. I wrote over half the codebase, delegated tasks and set meetings, and was involved in design and implementation. Written in Python using a MySQL database."
+            "description": "Lead team of 4 students in building a social media app with live chat, notification and marketplace features, within an Agile development methodology. I wrote over half the codebase, delegated tasks and set meetings, and was involved in design and implementation. Written in Python using a MySQL database.",
+            "imageSrc": "https://i.postimg.cc/zfXKcqpW/talk.png"
         },
         {
             "id": "2",
@@ -70,7 +71,9 @@
             "title": "Web Developer - Indiana Daily Student",
             "description": [
                 "• Develop custom-coded web pages and visualizations via Bootstrap, JS to enhance online engagement and spread community awareness, such as a breaking story about a local sexual assault case"
-            ]
+            ],
+            "imageURL": "https://i.postimg.cc/cLcfhv70/hope-church.png",
+            "url": "http://specials.idsnews.com/hope-church-pastor-sexual-harassment-allegations/index.html#pagenav"
         },
         {
             "title": "Data Science Intern - Prescient",
@@ -81,7 +84,11 @@
             ]
         }
     ],
-    "aboutpara": "I am an incoming senior at Indiana University studying Software Engineering at Indiana University and minoring in History and Chinese. I'm excited to continue exploring the rabbit hole that is modern web development, and to use my skills to create tools which promote my passions such as blockchain technology. I love fishing, traveling, reading sci-fi novels, and I'm pro cereal before milk!",
+    "aboutpara": [
+        "Incoming senior at Indiana University studying Software Engineering and History",
+        "Excited to continue exploring the rabbit hole of web development",
+        "Love fishing, traveling, sci-fi novels"
+    ],
     "courses": [
         "Software Engineering",
         "Data Analysis and Mining",
