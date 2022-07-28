@@ -115,13 +115,13 @@ export default function Home() {
                     </h1>
                     <div className="mt-5 tablet:m-10 grid grid-cols-1 laptop:grid-cols-2 gap-6">
                         {data.jobs.map((service, index) => (
-                            <div>
+                            <div key={index}>
                                 <ServiceCard
                                     key={index}
                                     name={service.title}
                                     description={service.description}
                                 />
-                                {service.imageURL && <a target="_blank" href={service.url}><img className="transition-all ease-out duration-300 hover:scale-105 cursor-pointer" src={service.imageURL} /></a>}
+                                {service.imageURL && <a target="_blank" rel="noreferrer" href={service.url}><img className="transition-all ease-out duration-300 hover:scale-105 cursor-pointer" src={service.imageURL} /></a>}
                             </div>
                         ))}
                     </div>
@@ -132,7 +132,7 @@ export default function Home() {
                     </h1>
                     <div className="mt-5 tablet:m-10 grid grid-cols-1 laptop:grid-cols-2 gap-6">
                         {data.services.map((service, index) => (
-                            <div>
+                            <div key={index}>
                                 <ServiceCard
                                     key={index}
                                     name={service.title}
@@ -149,7 +149,7 @@ export default function Home() {
                 >
                     <h1 className="tablet:m-10 text-2xl text-bold">About.</h1>
                     <ul className="tablet:m-10 mt-1 text-xl laptop:text-3xl w-full laptop:w-3/5">
-                        {data.aboutpara.map((point, index) => (<li>{"• " + point}</li>))
+                        {data.aboutpara.map((point, index) => (<li key={index}>{"• " + point}</li>))
                         }
                     </ul>
                     <h1 className="tablet:m-10 text-2xl">Coursework.</h1>
