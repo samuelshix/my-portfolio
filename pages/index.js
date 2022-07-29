@@ -97,7 +97,7 @@ export default function Home() {
                     ref={workRef}
                 >
                     <h1 className="text-2xl"><b>Software Engineering intern at Kash</b> (sites made by me):</h1>
-                    <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 gap-4">
+                    <div className="mt-5 laptop:mt-10 grid-cols-1 tablet:grid-cols-2 gap-4">
                         {data.projects.map((project) => (
                             <WorkCard
                                 key={project.id}
@@ -110,28 +110,11 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="mt-10 laptop:mt-30 p-2 laptop:p-0">
-                    <h1 className="tablet:m-10 text-3xl text-bold">
-                        Past Experience.
-                    </h1>
-                    <div className="mt-5 tablet:m-10 grid grid-cols-1 laptop:grid-cols-2 gap-6">
-                        {data.jobs.map((service, index) => (
-                            <div key={index}>
-                                <ServiceCard
-                                    key={index}
-                                    name={service.title}
-                                    description={service.description}
-                                />
-                                {service.imageURL && <a target="_blank" rel="noreferrer" href={service.url}><img className="transition-all ease-out duration-300 hover:scale-105 cursor-pointer" src={service.imageURL} /></a>}
-                            </div>
-                        ))}
-                    </div>
-                </div>
-                <div className="mt-10 laptop:mt-30 p-2 laptop:p-0">
                     <h1 className="tablet:m-10 text-2xl text-bold">
                         Other projects
                     </h1>
-                    <div className="mt-5 tablet:m-10 grid grid-cols-1 laptop:grid-cols-2 gap-6">
-                        {data.services.map((service, index) => (
+                    <div className="mt-5 tablet:m-10 grid-cols-1 laptop:grid-cols-1 gap-6">
+                        {data.other_rel_projects.map((service, index) => (
                             <div key={index}>
                                 <ServiceCard
                                     key={index}
@@ -139,6 +122,25 @@ export default function Home() {
                                     description={service.description}
                                 />
                                 {service.imageSrc && <img className="transition-all ease-out duration-300 hover:scale-105 cursor-pointer" src={service.imageSrc} />}
+                            </div>
+                        ))}
+                    </div>
+                </div>
+                <div className="mt-10 laptop:mt-30 p-2 laptop:p-0">
+                    <h1 className="tablet:m-10 text-3xl text-bold">
+                        Past Experience.
+                    </h1>
+                    <div className="mt-5 tablet:m-10 grid grid-cols-1 laptop:grid-cols-2 gap-6">
+                        {data.other_projects.map((service, index) => (
+                            <div className="mt-10"
+                                key={index}>
+                                <ServiceCard
+                                    key={index}
+                                    name={service.title}
+                                    description={service.description}
+                                    imageUrl={service.imageUrl}
+                                    imageSrc={service.imageSrc}
+                                />
                             </div>
                         ))}
                     </div>
