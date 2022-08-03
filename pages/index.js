@@ -7,7 +7,7 @@ import { useIsomorphicLayoutEffect } from "../utils";
 import { stagger } from "../animations";
 import Footer from "../components/Footer";
 import Head from "next/head";
-
+import Button from "../components/Button"
 // Local Data
 import data from "../data/portfolio.json";
 
@@ -53,6 +53,7 @@ export default function Home() {
     return (
         <>
             <Head>
+                <Button></Button>
                 <title>{data.name}</title>
             </Head>
             <div className="container mx-auto mb-10">
@@ -76,58 +77,47 @@ export default function Home() {
                                 {data.headerTaglineTwo}
                             </p>
                         </b>
-                        <h1
-                            ref={textThree}
-                            className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
-                        >
-                            {data.headerTaglineThree}
-                        </h1>
-                        <h1
-                            ref={textFour}
-                            className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
-                        >
-                            {data.headerTaglineFour}
-                        </h1>
                     </div>
 
                     <Socials className="mt-2 laptop:mt-5" />
                 </div>
                 <div
-                    className="mt-10 laptop:mt-30 p-2 laptop:p-0"
+                    className="laptop:mt-36 p-2 laptop:p-0 tablet:m-2 laptop:w-5/6 mob:mt-5 mob:w-full"
                     ref={workRef}
+                    style={{ marginLeft: "auto", marginRight: "auto" }}
                 >
-                    <h1 className="text-2xl"><b>Software Engineering intern at Kash</b> (sites made by me):</h1>
-                    <div className="mt-5 laptop:mt-10 grid-cols-1 tablet:grid-cols-2 gap-4">
+                    <h1 className="text-6xl translate-y-2.5 "><b>Favorite projects:</b></h1>
+                    <div className="laptop:px-36 mob:p-5 bg-indigo-300 rounded-md text-white">
                         {data.projects.map((project) => (
                             <WorkCard
                                 key={project.id}
                                 img={project.imageSrc}
+                                desc={project.imageDesc}
                                 name={project.title}
                                 description={project.description}
-                                onClick={() => window.open(project.url)}
                             />
                         ))}
                     </div>
                 </div>
-                <div className="mt-10 laptop:mt-30 p-2 laptop:p-0">
-                    <h1 className="tablet:m-10 text-2xl text-bold">
+                <div className="mt-20 laptop:mt-30 p-2 laptop:p-0" >
+                    <h1 className="tablet:m-10 text-4xl text-bold">
                         Other projects
                     </h1>
-                    <div className="mt-5 tablet:m-10 grid-cols-1 laptop:grid-cols-1 gap-6">
+                    <div className="mt-5 tablet:m-10 laptop:w-5/6 mob:mt-5 mob:w-full gap-6" style={{ marginLeft: "auto", marginRight: "auto" }}>
                         {data.other_rel_projects.map((service, index) => (
-                            <div key={index}>
+                            <div className="laptop:mt-20 mob:mt-5 transition-all ease-out duration-300 hover:scale-105 cursor-pointer" key={index} >
                                 <ServiceCard
                                     key={index}
                                     name={service.title}
                                     description={service.description}
                                 />
-                                {service.imageSrc && <img className="transition-all ease-out duration-300 hover:scale-105 cursor-pointer" src={service.imageSrc} />}
+                                {service.imageSrc && <img src={service.imageSrc} />}
                             </div>
                         ))}
                     </div>
                 </div>
-                <div className="mt-10 laptop:mt-30 p-2 laptop:p-0">
-                    <h1 className="tablet:m-10 text-3xl text-bold">
+                <div className="mt-20 laptop:mt-30 p-2 laptop:p-0">
+                    <h1 className="tablet:m-10 text-4xl text-bold">
                         Past Experience.
                     </h1>
                     <div className="mt-5 tablet:m-10 grid grid-cols-1 laptop:grid-cols-2 gap-6">

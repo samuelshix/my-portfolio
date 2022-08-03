@@ -21,21 +21,48 @@
             "id": "1",
             "title": "Kashflows",
             "description": "React, React Router, Django REST, recursive API method. Deployed to Vercel.",
-            "imageSrc": "https://i.postimg.cc/MG9BmCzh/Kashflows.png",
+            "imageSrc": [
+                "./images/flows-1.png",
+                "./images/flows-2.png",
+                "./images/flows-3.png",
+                "./images/flows-4.png"
+            ],
+            "imageDesc": [
+                "Kash-flows allows you to visualize the flow of Ethereum tokens from one wallet to another, using a recursive API call to query the blockchain. Technologies used: ReactJS, Django REST. Heroku/Vercel, ReactFlow, D3",
+                "Data is then passed to the React frontend via a Django REST API, and a graph of transactions and wallets is displayed on the page using ReactFlow and D3.",
+                "Users may input a timeframe to search transactions as an option, however they are required to input a wallet address to search from.",
+                "I posted this website on Reddit for feedback, and boy did we do just that! As of 8/3/2022, my post is sitting at 8.7k views!"
+            ],
             "url": "https://kashflows.vercel.app/"
         },
         {
             "id": "2",
             "title": "Crypto Threads",
             "description": "jQuery/AJAX, ChartJS, Pandas, Django, Postgres, Deployed to Digital Ocean",
-            "imageSrc": "https://i.postimg.cc/QMZhCbww/Crypto-Threads.png",
+            "imageSrc": [
+                "./images/threads-1.png",
+                "./images/threads-3.png",
+                "./images/threads-4.png",
+                "./images/threads-2.png"
+            ],
+            "imageDesc": [
+                "Crypto Threads aggregates Reddit comments and Tweets for multiple cryptocurrencies for a specific date, allowing users to get a sense of market sentiment among top social media posts. Users may select a date on the graph and view top posts for that date. Technologies used: jQuery, AJAX, ChartJS, Pandas, Django, Postgres, Digital Ocean",
+                "Users may select a smaller timeframe to view the graph in. Reddit and Twitter data is stored in a Postgres Database via an API script, and is automatically updated daily. Database now contains ~52,000 comments from ~4,400 threads.",
+                "Toggling between social media platforms and changing what asset class to view:",
+                "Highest upvoted Reddit Comment among multiple subreddits displayed for a date:"
+            ],
             "url": "https://crypto-social-sentiment-wq83w.ondigitalocean.app/"
         },
         {
             "id": "3",
             "title": "Heatmaps",
             "description": "React, ChartJS, ChromaJS. Deployed to Vercel.",
-            "imageSrc": "https://i.postimg.cc/3JgdBkhs/Heatmaps.png",
+            "imageSrc": [
+                "https://i.postimg.cc/3JgdBkhs/Heatmaps.png"
+            ],
+            "imageDesc": [
+                "Investing tool which adapts popular 200 WMA Bitcoin heatmap indicator for 13,420 other cryptocurrencies. Dynamically loads moving average timeframe based on total history. Technologies used: ReactJS, ChartJS, ChromaJS. Heroku/Vercel"
+            ],
             "url": "https://heatmaps.vercel.app/"
         }
     ],
@@ -43,26 +70,45 @@
         {
             "id": "1",
             "title": "Talk!",
-            "description": "Lead team of 4 students in building a social media app with live chat, notification and marketplace features, within an Agile development methodology. I wrote over half the codebase, delegated tasks and set meetings, and was involved in design and implementation. Written in Python using a MySQL database.",
+            "description": "Lead team of 4 students in building a social media app with live chat, notification and marketplace features, within an Agile development methodology. I wrote over half the codebase, delegated tasks and set meetings, and was involved in design and implementation. Used Django, Django-allauth, Django-channels, Bootstrap and MySQL.",
             "imageSrc": "https://i.postimg.cc/zfXKcqpW/talk.png",
             "imageUrl": ""
         },
         {
             "id": "2",
-            "title": "Web Developer - Indiana Daily Student",
-            "description": "Develop custom-coded web pages and visualizations via Bootstrap, JS to enhance online engagement and spread community awareness, such as a breaking story about a local sexual assault case",
+            "title": "Voting Quiz Buildout",
+            "description": "Coded interactive voting quiz to teach people how to vote in different personal circumstances, ahead of the 2020 election",
+            "imageSrc": "./images/voting.png",
+            "imageUrl": "http://specials.idsnews.com/monroe-county-indiana-how-to-vote/"
+        },
+        {
+            "id": "3",
+            "title": "Hope Church Allegations Buildout",
+            "description": "Coded website for breaking story covering abuse by local pastor, including an interactive timeline for the events unfolding in the story",
             "imageSrc": "https://i.postimg.cc/cLcfhv70/hope-church.png",
             "imageUrl": "http://specials.idsnews.com/hope-church-pastor-sexual-harassment-allegations/index.html#pagenav"
         }
     ],
     "other_projects": [
         {
-            "title": "Cryptocurrency Analyst - Intellabridge",
+            "title": "Software Engineer Intern at Intellabridge",
+            "description": [
+                "• Built and deployed a series of cryptocurrency analytics tools to build company repertoire and legitimacy within the cryptocurrency community (many of which are showcased above)"
+            ]
+        },
+        {
+            "title": "Cryptocurrency Analyst at Intellabridge",
             "description": [
                 "• Automate Postgresql data ingestion for company analytics dashboard via Github Actions and JS API script",
                 " • Ingest, process and present blockchain data using SQL",
                 " Pandas and Excel to uncover on-chain trends",
                 " • Present data analysis for these trends on Intellabridge’s YouTube, resulting in a doubling of total view count"
+            ]
+        },
+        {
+            "title": "Digital Editor at Indiana Daily Student",
+            "description": [
+                "• Develop custom-coded web pages and visualizations via raw HTML/CSS, Bootstrap and JS to enhance online engagement and spread community awareness of critical issues"
             ]
         }
     ],

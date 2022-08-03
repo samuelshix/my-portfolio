@@ -52,12 +52,14 @@ const Header = ({ handleWorkScroll, handleAboutScroll }) => {
                 )}
             </Popover>
             <div className="mt-10 flex flex-row items-center justify-between sticky bg-white top-0 z-10 hidden tablet:flex header">
-                <h1
-                    onClick={() => router.push("/")}
-                    className="font-medium cursor-pointer mob:p-2 laptop:p-0"
-                >
-                    {data.name}.
-                </h1>
+                <Button type="primary">
+                    <h1
+                        onClick={() => router.push("/")}
+                        className="font-medium cursor-pointer mob:p-2 laptop:p-0"
+                    >
+                        {data.name}.
+                    </h1>
+                </Button>
                 <div className="flex">
                     <Button onClick={handleWorkScroll}>Work</Button>
                     <Button onClick={handleAboutScroll}>About</Button>
