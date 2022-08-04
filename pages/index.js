@@ -150,7 +150,7 @@ export default function Home() {
                             <h1 className="mb-2" key={index}>{course}</h1>
                         ))}
                     </div>
-                    <h1 className="mt-20 text-2xl font-bold">Languages.</h1>
+                    <h1 className="mt-20 text-2xl font-bold">Languages</h1>
                     <p className="inline-block tablet:mb-10 bg-gradient-to-r from-green-500 to-emerald-500 text-white p-5 rounded-lg font-black">Javascript, Python, Java, SQL</p>
                     <h1 className="mt-20 text-2xl font-bold">Technologies.</h1>
                     <p className="inline-block tablet:mb-10 bg-gradient-to-r from-lime-500 to-green-500 text-white p-5 rounded-lg">ReactJS, jQuery/AJAX, Django/Django REST, D3, Postgresql, MySQL, Git, Github Actions, Cron, Pandas, Vercel, Heroku, DigitalOcean</p>

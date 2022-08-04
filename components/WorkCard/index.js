@@ -29,7 +29,7 @@ const WorkCard = ({ img, desc, name, description }) => {
                 {description ? description : "Description"}
             </h2>
             <Carousel
-                className="overflow-hidden rounded-lg transition-all ease-out duration-300 hover:scale-x-105 h-48 mob:h-auto"
+                className="overflow-hidden rounded-lg transition-all ease-out duration-300 hover:scale-95 h-48 mob:h-auto"
             >
                 {images}
             </Carousel>
