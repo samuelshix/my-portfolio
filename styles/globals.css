@@ -19,3 +19,12 @@
   background-color: rgba(255, 255, 255, 0.692);
   backdrop-filter: blur(3px);
 }
+
+.carousel .slide .legend {
+  background: white !important;
+  color: black !important;
+  opacity: .8 !important;
+  padding: 1.5em 1em !important;
+  width: 95% !important;
+  margin-left: -47.5% !important;
+}

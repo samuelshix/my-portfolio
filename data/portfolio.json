@@ -43,13 +43,15 @@
                 "./images/threads-1.png",
                 "./images/threads-3.png",
                 "./images/threads-4.png",
-                "./images/threads-2.png"
+                "./images/threads-2.png",
+                "./images/threads-6.png"
             ],
             "imageDesc": [
                 "Crypto Threads aggregates Reddit comments and Tweets for multiple cryptocurrencies for a specific date, allowing users to get a sense of market sentiment among top social media posts. Users may select a date on the graph and view top posts for that date. Technologies used: jQuery, AJAX, ChartJS, Pandas, Django, Postgres, Digital Ocean",
                 "Users may select a smaller timeframe to view the graph in. Reddit and Twitter data is stored in a Postgres Database via an API script, and is automatically updated daily. Database now contains ~52,000 comments from ~4,400 threads.",
                 "Toggling between social media platforms and changing what asset class to view:",
-                "Highest upvoted Reddit Comment among multiple subreddits displayed for a date:"
+                "Highest upvoted Reddit Comment among multiple subreddits displayed for a date:",
+                "A Twitter bot takes the top Reddit comment and posts it to reddit along with the subreddit and no. upvotes. The bot is currently inactive, but can be found here: https://twitter.com/TopCryptoReddit"
             ],
             "url": "https://crypto-social-sentiment-wq83w.ondigitalocean.app/"
         },
@@ -124,5 +126,26 @@
         "Data Structures",
         "Intro to Software Systems",
         "Intro to Programming"
+    ],
+    "languages": [
+        "Javascript",
+        "Python",
+        "SQL",
+        "Java"
+    ],
+    "technologies": [
+        "ReactJS",
+        "jQuery",
+        "Django",
+        "Django REST",
+        "PostgreSQL",
+        "Git",
+        "HTML",
+        "CSS",
+        "Linux",
+        "AWS",
+        "D3",
+        "ChartJS",
+        "Pandas"
     ]
 }

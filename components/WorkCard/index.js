@@ -4,6 +4,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import data from "../../data/portfolio.json";
 
+// for project feature slide shows
 const WorkCard = ({ img, desc, name, description }) => {
     let images = []
     for (let i = 0; i < img.length; i++) {

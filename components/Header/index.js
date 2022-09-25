@@ -5,7 +5,7 @@ import { Popover } from "@headlessui/react";
 // Local Data
 import data from "../../data/portfolio.json";
 
-const Header = ({ handleWorkScroll, handleAboutScroll }) => {
+const Header = ({ handleProjectScroll, handleWorkScroll, handleAboutScroll }) => {
     const router = useRouter();
     return (
         <>
@@ -17,7 +17,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll }) => {
                                 onClick={() => router.push("/")}
                                 className="font-medium cursor-pointer p-2 laptop:p-0"
                             >
-                                {data.name}.
+                                {data.name}
                             </h1>
                             <Popover.Button>
                                 <img
@@ -30,6 +30,9 @@ const Header = ({ handleWorkScroll, handleAboutScroll }) => {
                         <Popover.Panel className="absolute right-0 z-10 w-11/12 p-4 bg-white shadow-md rounded-md">
 
                             <div className="grid grid-cols-1">
+                                <Button onClick={handleProjectScroll}>
+                                    Projects
+                                </Button>
                                 <Button onClick={handleWorkScroll}>
                                     Work
                                 </Button>
@@ -57,10 +60,11 @@ const Header = ({ handleWorkScroll, handleAboutScroll }) => {
                         onClick={() => router.push("/")}
                         className="font-medium cursor-pointer mob:p-2 laptop:p-0"
                     >
-                        {data.name}.
+                        {data.name}
                     </h1>
                 </Button>
                 <div className="flex">
+                    <Button onClick={handleProjectScroll}>Projects</Button>
                     <Button onClick={handleWorkScroll}>Work</Button>
                     <Button onClick={handleAboutScroll}>About</Button>
                     <Button
