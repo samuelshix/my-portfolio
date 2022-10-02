@@ -51,9 +51,8 @@
                 "Users may select a smaller timeframe to view the graph in. Reddit and Twitter data is stored in a Postgres Database via an API script, and is automatically updated daily. Database now contains ~52,000 comments from ~4,400 threads.",
                 "Toggling between social media platforms and changing what asset class to view:",
                 "Highest upvoted Reddit Comment among multiple subreddits displayed for a date:",
-                "A Twitter bot takes the top Reddit comment and posts it to reddit along with the subreddit and no. upvotes. The bot is currently inactive, but can be found here: https://twitter.com/TopCryptoReddit"
-            ],
-            "url": "https://crypto-social-sentiment-wq83w.ondigitalocean.app/"
+                "A Twitter bot takes the top Reddit comment and posts it to reddit along with the subreddit and no. upvotes.The bot is currently inactive, but can be found here: https://twitter.com/TopCryptoReddit"
+            ]
         },
         {
             "id": "3",
@@ -71,15 +70,15 @@
     "other_rel_projects": [
         {
             "id": "1",
-            "title": "Talk!",
-            "description": "Lead team of 4 students in building a social media app with live chat, notification and marketplace features, within an Agile development methodology. I wrote over half the codebase, delegated tasks and set meetings, and was involved in design and implementation. Used Django, Django-allauth, Django-channels, Bootstrap and MySQL.",
-            "imageSrc": "https://i.postimg.cc/zfXKcqpW/talk.png",
-            "imageUrl": ""
+            "title": "Voting Quiz Buildout 2022",
+            "description": "Coded an updated interactive voting quiz to teach people how to vote in different personal circumstances, ahead of the 2022 election",
+            "imageSrc": "./images/voting2.png",
+            "imageUrl": "https://specials.idsnews.com/vote-register-quiz-election-indiana/"
         },
         {
             "id": "2",
-            "title": "Voting Quiz Buildout",
-            "description": "Coded interactive voting quiz to teach people how to vote in different personal circumstances, ahead of the 2020 election",
+            "title": "Voting Quiz Buildout 2020",
+            "description": "Interactive voting quiz to teach people how to vote in different personal circumstances, ahead of the 2020 election",
             "imageSrc": "./images/voting.png",
             "imageUrl": "http://specials.idsnews.com/monroe-county-indiana-how-to-vote/"
         },

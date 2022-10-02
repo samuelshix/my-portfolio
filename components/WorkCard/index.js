@@ -5,7 +5,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import data from "../../data/portfolio.json";
 
 // for project feature slide shows
-const WorkCard = ({ img, desc, name, description }) => {
+const WorkCard = ({ img, desc, name, description, url }) => {
     let images = []
     for (let i = 0; i < img.length; i++) {
         const element = img[i];
@@ -19,7 +19,6 @@ const WorkCard = ({ img, desc, name, description }) => {
         </div>)
     }
     return (
-
         <div
             className="overflow-hidden cursor-pointer rounded-lg p-2 laptop:p-4 first:ml-0"
         >
@@ -29,11 +28,16 @@ const WorkCard = ({ img, desc, name, description }) => {
             <h2 className="text-xl opacity-80">
                 {description ? description : "Description"}
             </h2>
-            <Carousel
+            {url ? <Carousel
                 className="overflow-hidden rounded-lg transition-all ease-out duration-300 hover:scale-95 h-48 mob:h-auto"
             >
                 {images}
-            </Carousel>
+            </Carousel> :
+                <Carousel
+                    className="overflow-hidden rounded-lg transition-all ease-out h-48 mob:h-auto"
+                >
+                    {images}
+                </Carousel>}
         </div>
     );
 };

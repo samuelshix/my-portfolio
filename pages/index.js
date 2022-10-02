@@ -95,31 +95,39 @@ export default function Home() {
                 >
                     <h1 className="text-6xl translate-y-2.5 "><b>Favorite projects.</b></h1>
                     <div className="laptop:px-36 mob:p-5 bg-gradient-to-br from-indigo-500 to-blue-500 rounded-md text-white">
+
                         {data.projects.map((project) => (
-                            <WorkCard
-                                key={project.id}
-                                img={project.imageSrc}
-                                desc={project.imageDesc}
-                                name={project.title}
-                                description={project.description}
-                            />
+                            <a href={project.url} target="_blank">
+
+                                <WorkCard
+                                    key={project.id}
+                                    img={project.imageSrc}
+                                    url={project.url}
+                                    desc={project.imageDesc}
+                                    name={project.title}
+                                    description={project.description}
+                                />
+                            </a>
                         ))}
                     </div>
                 </div>
-                <div className="mt-10 mx-0 p-2 -translate-x-2 -translate-y-6 laptop:p-0 tablet:m-2 mob:mt-5 mob:w-full" >
+                <div className="mt-10 mx-0 p-2 -translate-x-2 -translate-y-6 laptop:p-0 tablet:m-2 mob:mt-5 mob:w-full" id="news">
                     <div className="laptop:px-24 mob:p-5 -mt-1 bg-indigo-200 rounded-lg z-0" style={{ marginLeft: "auto", marginRight: "auto" }}>
                         <h1 className="-mt-5 text-5xl mb-16 font-black tablet:translate-y-12 mob:translate-y-9">
-                            Other projects.
+                            News projects.
                         </h1>
                         <div className="mob:w-full grid laptop:grid-cols-2 mob:grid-cols-1 laptop:gap-10">
                             {data.other_rel_projects.map((service, index) => (
+
                                 <div className="mt-5 transition-all ease-out duration-300 hover:scale-105 cursor-pointer" key={index} >
-                                    <ServiceCard
-                                        key={index}
-                                        name={service.title}
-                                        description={service.description}
-                                    />
-                                    {service.imageSrc && <img src={service.imageSrc} />}
+                                    <a href={service.imageUrl} target="_blank">
+                                        <ServiceCard
+                                            key={index}
+                                            name={service.title}
+                                            description={service.description}
+                                        />
+                                        {service.imageSrc && <img src={service.imageSrc} />}
+                                    </a>
                                 </div>
                             ))}
                         </div>
