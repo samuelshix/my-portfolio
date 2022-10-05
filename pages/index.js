@@ -97,10 +97,9 @@ export default function Home() {
                     <div className="laptop:px-36 mob:p-5 bg-gradient-to-br from-indigo-500 to-blue-500 rounded-md text-white">
 
                         {data.projects.map((project) => (
-                            <a href={project.url} target="_blank">
+                            <a href={project.url} rel="noreferrer" target="_blank" key={project.id}                            >
 
                                 <WorkCard
-                                    key={project.id}
                                     img={project.imageSrc}
                                     url={project.url}
                                     desc={project.imageDesc}
@@ -120,7 +119,7 @@ export default function Home() {
                             {data.other_rel_projects.map((service, index) => (
 
                                 <div className="mt-5 transition-all ease-out duration-300 hover:scale-105 cursor-pointer" key={index} >
-                                    <a href={service.imageUrl} target="_blank">
+                                    <a href={service.imageUrl} target="_blank" rel="noreferrer">
                                         <ServiceCard
                                             key={index}
                                             name={service.title}
