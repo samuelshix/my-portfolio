@@ -56,6 +56,18 @@
         },
         {
             "id": "3",
+            "title": "2022 Live Elections Dashboard",
+            "description": "Sheetrocks, ChartJS, jQuery.",
+            "imageSrc": [
+                "https://i.postimg.cc/6qPjmBNk/election-Live-Updates.png"
+            ],
+            "imageDesc": [
+                "An elections dashboard containing live vote count updates for the 2022 midterms, for Monroe County Indiana, featuring 30 elections and referendums."
+            ],
+            "url": "https://specials.idsnews.com/live-election-update-monroe-county-2022/"
+        },
+        {
+            "id": "4",
             "title": "Heatmaps",
             "description": "React, ChartJS, ChromaJS. Deployed to Vercel.",
             "imageSrc": [
@@ -65,31 +77,45 @@
                 "Investing tool which adapts popular 200 WMA Bitcoin heatmap indicator for 13,420 other cryptocurrencies. Dynamically loads moving average timeframe based on total history. Technologies used: ReactJS, ChartJS, ChromaJS. Heroku/Vercel"
             ],
             "url": "https://heatmaps.vercel.app/"
-        }
-    ],
-    "other_rel_projects": [
+        },
         {
-            "id": "1",
+            "id": "5",
             "title": "Voting Quiz Buildout 2022",
-            "description": "Coded an updated interactive voting quiz to teach people how to vote in different personal circumstances, ahead of the 2022 election",
-            "imageSrc": "./images/voting2.png",
-            "imageUrl": "https://specials.idsnews.com/vote-register-quiz-election-indiana/"
+            "description": "HTML/CSS/JS/jQuery",
+            "imageSrc": [
+                "./images/voting2.png"
+            ],
+            "url": "https://specials.idsnews.com/vote-register-quiz-election-indiana/",
+            "imageDesc": [
+                "Interactive voting quiz for 2022 midterms to educate voters on their options, given their circumstances."
+            ]
         },
         {
-            "id": "2",
+            "id": "6",
             "title": "Voting Quiz Buildout 2020",
-            "description": "Interactive voting quiz to teach people how to vote in different personal circumstances, ahead of the 2020 election",
-            "imageSrc": "./images/voting.png",
-            "imageUrl": "http://specials.idsnews.com/monroe-county-indiana-how-to-vote/"
+            "description": "HTML/CSS/JS",
+            "imageSrc": [
+                "./images/voting.png"
+            ],
+            "url": "http://specials.idsnews.com/monroe-county-indiana-how-to-vote/",
+            "imageDesc": [
+                "Interactive voting quiz for 2020 election to educate voters, my first meaningful coding project!"
+            ]
         },
         {
-            "id": "3",
+            "id": "7",
             "title": "Hope Church Allegations Buildout",
             "description": "Coded website for breaking story covering abuse by local pastor, including an interactive timeline for the events unfolding in the story",
-            "imageSrc": "https://i.postimg.cc/cLcfhv70/hope-church.png",
-            "imageUrl": "http://specials.idsnews.com/hope-church-pastor-sexual-harassment-allegations/index.html#pagenav"
+            "imageSrc": [
+                "https://i.postimg.cc/cLcfhv70/hope-church.png"
+            ],
+            "url": "http://specials.idsnews.com/hope-church-pastor-sexual-harassment-allegations/index.html#pagenav",
+            "imageDesc": [
+                "Coded website for breaking story covering abuse by local pastor, including an interactive timeline for the events unfolding in the story"
+            ]
         }
     ],
+    "other_rel_projects": [],
     "other_projects": [
         {
             "title": "Software Engineer Intern at Intellabridge",

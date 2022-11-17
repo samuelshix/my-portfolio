@@ -54,7 +54,7 @@ const Header = ({ handleProjectScroll, handleWorkScroll, handleAboutScroll }) =>
                     </>
                 )}
             </Popover>
-            <div className="mt-10 flex flex-row items-center justify-between sticky bg-white top-0 z-10 hidden tablet:flex header">
+            <div className="mt-10 flex flex-row items-center justify-between sticky bg-slate-700/50 px-5 py-2 rounded-lg top-0 z-10 hidden tablet:flex header">
                 <Button type="primary">
                     <h1
                         onClick={() => router.push("/")}

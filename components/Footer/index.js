@@ -5,9 +5,9 @@ import Link from "next/link";
 const Footer = () => {
     return (
         <>
-            <div className="tablet:mt-40 mob:mt-10 mob:p-5 p-2 laptop:p-0">
-                <h1 className="mob:mt-10 text-2xl font-bold">Contact.</h1>
-                <div className="mt-5">
+            <div className="p-5 bg-indigo-100 rounded-2xl mt-10">
+                <h1 className="text-2xl font-bold">Contact.</h1>
+                <div className="mt-3">
                     <Socials />
                 </div>
             </div>
