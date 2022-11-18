@@ -18,9 +18,10 @@ html {
 }
 
 .carousel .slide .legend {
-  background: white !important;
-  color: black !important;
-  opacity: .8 !important;
+  background: rgba(0, 0, 0, 0.651) !important;
+  opacity: 1 !important;
+  backdrop-filter: blur(10px) !important;
+  color: white !important;
   width: 95% !important;
   margin-left: -47.5% !important;
 }

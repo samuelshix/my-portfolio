@@ -71,12 +71,7 @@ export default function Home() {
                 </script>
             </Head>
             <div>
-                <div className="container mx-auto bg-white/10 backdrop-blur-sm px-10 py-5 mb-10">
-                    <Header
-                        handleProjectScroll={handleProjectScroll}
-                        handleWorkScroll={handleWorkScroll}
-                        handleAboutScroll={handleAboutScroll}
-                    />
+                <div className="container mx-auto bg-white/10 backdrop-blur-sm px-10 py-5 pb-20 mob:px-3">
                     <div className="mt-24">
                         <div className="mt-5">
                             <h1
@@ -97,6 +92,13 @@ export default function Home() {
 
                         <Socials className="mt-0" />
                     </div>
+                </div>
+                <Header
+                    handleProjectScroll={handleProjectScroll}
+                    handleWorkScroll={handleWorkScroll}
+                    handleAboutScroll={handleAboutScroll}
+                />
+                <div className="container mx-auto bg-white/10 backdrop-blur-sm px-10 py-5 mb-10 mob:px-3">
                     <div
                         className="tablet:mt-20 desktop:mt-36 mx-0 p-2 z-10 laptop:p-0 tablet:m-2 mob:mt-5 mob:w-full"
                         ref={projectRef}
