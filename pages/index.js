@@ -62,16 +62,9 @@ export default function Home() {
                 <Button></Button>
                 <title>{data.name}</title>
                 <script async src="https://www.googletagmanager.com/gtag/js?id=G-2N3FBN7X6J"></script>
-                <script>
-                    {/* dangerouslySetInnerHTML= {{
-                        __html: `window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-                    gtag('config', 'G-2N3FBN7X6J');`}} */}
-                </script>
             </Head>
             <div>
-                <div className="container mx-auto bg-white/10 backdrop-blur-sm px-10 py-5 pb-20 mob:px-3">
+                <div className="container mx-auto bg-white/10 backdrop-blur-sm px-10 pb-10 mob:px-3">
                     <div className="mt-24">
                         <div className="mt-5">
                             <h1
@@ -93,6 +86,7 @@ export default function Home() {
                         <Socials className="mt-0" />
                     </div>
                 </div>
+
                 <Header
                     handleProjectScroll={handleProjectScroll}
                     handleWorkScroll={handleWorkScroll}
@@ -100,11 +94,33 @@ export default function Home() {
                 />
                 <div className="container mx-auto bg-white/10 backdrop-blur-sm px-10 py-5 mb-10 mob:px-3">
                     <div
+                        className="tablet:mt-20 desktop:mt-36 p-2 z-10 laptop:p-0 tablet:m-2 mob:mt-5 mob:w-full"
+                        ref={workRef}
+                    >
+                        <h1 className="text-4xl p-5 inline-block rounded-t-xl font-black bg-sky-600 text-sky-100">
+                            Professional Experience.
+                        </h1>
+                        <div className="laptop:px-12 bg-sky-600 grid grid-cols-1 laptop:grid-cols-2 mob:grid-cols-1 gap-5 rounded-3xl rounded-tl-none py-16 text-indigo-50" style={{ marginLeft: "auto", marginRight: "auto" }}>
+                            {data.other_projects.map((service, index) => (
+                                <div className="mt-10 mob:mt-0 bg-white/10 rounded-md hover:text-white hover:shadow-xl hover:bg-white/20 duration-300"
+                                    key={index}>
+                                    <div className="w-full p-2 mob:p-4 rounded-lg transition-all ease-out duration-300">
+                                        <h1 className="text-3xl mob:text-2xl font-bold" >{service.title}</h1>
+                                        <ul className="py-2 rounded-lg mt-1 text-md w-full opacity-80">
+                                            {service.description.map((point, index) => (<li className="mb-2" key={index}>{"• " + point}</li>))
+                                            }
+                                        </ul>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    <div
                         className="tablet:mt-20 desktop:mt-36 mx-0 p-2 z-10 laptop:p-0 tablet:m-2 mob:mt-5 mob:w-full"
                         ref={projectRef}
                         style={{ marginLeft: "auto", marginRight: "auto" }}
                     >
-                        <h1 className="text-4xl bg-indigo-500 p-2 px-5 inline-block rounded-t-lg text-indigo-100"><b>Favorite projects.</b></h1>
+                        <h1 className="text-4xl bg-indigo-500 p-5 inline-block rounded-t-xl text-indigo-100"><b>Favorite projects.</b></h1>
                         <div className="laptop:px-12 bg-indigo-500 grid grid-cols-2 laptop:grid-cols-3 mob:grid-cols-1 gap-5 rounded-3xl rounded-tl-none py-10 text-indigo-50">
 
                             {data.projects.map((project) => (
@@ -121,28 +137,7 @@ export default function Home() {
                             ))}
                         </div>
                     </div>
-                    <div
-                        className="mt-10 p-2 laptop:p-0"
-                        ref={workRef}
-                    >
-                        <h1 className="tablet:m-10 text-4xl text-right font-black tablet:translate-y-12 mob:translate-y-9 bg-sky-700 inline float-right p-2 px-5 rounded-t-lg text-sky-200">
-                            Professional Experience.
-                        </h1>
-                        <div className="laptop:px-12 mob:p-5 py-10 mt-5 bg-sky-700 rounded-2xl tablet:m-10 mob:mt-5 mob:w-full grid laptop:grid-cols-2 mob:grid-cols-1 laptop:gap-5 text-sky-100" style={{ marginLeft: "auto", marginRight: "auto" }}>
-                            {data.other_projects.map((service, index) => (
-                                <div className="mt-10 mob:mt-0 bg-white/10 rounded-md hover:text-white hover:shadow-xl hover:bg-white/20 duration-300"
-                                    key={index}>
-                                    <div className="w-full p-2 mob:p-4 rounded-lg transition-all ease-out duration-300">
-                                        <h1 className="text-3xl mob:text-2xl font-bold" >{service.title}</h1>
-                                        <ul className="py-2 rounded-lg mt-1 text-xl w-full opacity-50">
-                                            {data.aboutpara.map((point, index) => (<li key={index}>{"• " + point}</li>))
-                                            }
-                                        </ul>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
+
                     <div
                         className="mt-5 laptop:mt-20 tablet:mt-10 p-5 bg-teal-700 text-white rounded-2xl"
                         ref={aboutRef}

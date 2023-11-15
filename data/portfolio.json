@@ -118,24 +118,43 @@
     "other_rel_projects": [],
     "other_projects": [
         {
-            "title": "Software Engineer Intern at Intellabridge",
+            "title": "Software Engineer @ JP Morgan Chase",
             "description": [
-                "• Built and deployed a series of cryptocurrency analytics tools to build company repertoire and legitimacy within the cryptocurrency community (many of which are showcased above)"
+                "Create performance tests in Jmeter by writing events to Kafka topics and consuming them in Java Spring services to simulate real world load on the system",
+                "Write JUnit tests, Cucumber functional tests and integration tests to ensure code quality and functionality across all systems",
+                "Addressed regular bugs and improvements in existing Java Spring services using Agile methodology and Jenkins CI/CD pipelines for rapid iteration",
+                "Lead production deployments by gaining approval from Product Owner and Product Manager, using Splunk and Dynatrace to monitor application health"
             ]
         },
         {
-            "title": "Cryptocurrency Analyst at Intellabridge",
+            "title": "Elections Platform Engineering Intern @ The Washington Post",
             "description": [
-                "• Automate Postgresql data ingestion for company analytics dashboard via Github Actions and JS API script",
-                " • Ingest, process and present blockchain data using SQL",
-                " Pandas and Excel to uncover on-chain trends",
-                " • Present data analysis for these trends on Intellabridge’s YouTube, resulting in a doubling of total view count"
+                "Enabled end to end election race call functionality via development of editorial election tool in Remix, Python data pipelines and end to end integrations via Hasura GraphQL Actions",
+                "Refined CI/CD pipeline using Github Actions",
+                "Created Slack bot notification service using Python and Hasura event triggers to notify editors of new election results, resulting in a 50% reduction in time spent on manually checking for new results",
+                "Won hackathon for Chat GPT powered JavaScript Chrome extension to make articles more accessible to readers of cognitive disabilities, younger age, and different languages"
             ]
         },
         {
-            "title": "Digital Editor at Indiana Daily Student",
+            "title": "Software Engineer Intern @ Intellabridge",
             "description": [
-                "• Develop custom-coded web pages and visualizations via raw HTML/CSS, Bootstrap and JS to enhance online engagement and spread community awareness of critical issues"
+                "Built and deployed a series of cryptocurrency analytics tools to build company repertoire and legitimacy within the cryptocurrency community",
+                "Projects showcased in the 'Projects' section"
+            ]
+        },
+        {
+            "title": "Cryptocurrency Analyst @ Intellabridge",
+            "description": [
+                "Automate Postgresql data ingestion for company analytics dashboard via Github Actions and JS API script",
+                "Ingest, process and present blockchain data using SQL queries and Pandas",
+                "Present data analysis for these trends on Intellabridge’s YouTube, resulting in a doubling of total view count"
+            ]
+        },
+        {
+            "title": "Frontend Developer @ Indiana Daily Student",
+            "description": [
+                "Develop entire elections dashboard for 2022 Indiana midterms, featuring 30 elections and referendums, with live vote count updates via Chart.JS and Google Sheets API",
+                "Develop custom-coded web pages and visualizations via raw HTML/CSS, Bootstrap and JS to enhance online engagement and spread community awareness of critical issues"
             ]
         }
     ],
