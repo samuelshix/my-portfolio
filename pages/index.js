@@ -147,12 +147,6 @@ export default function Home() {
                             {data.aboutpara.map((point, index) => (<li key={index}>{"• " + point}</li>))
                             }
                         </ul>
-                        <h1 className="tablet:mt-20 mob:mt-10 text-2xl font-bold">Coursework:</h1>
-                        <div className="mt-5 mob:mt-1 tablet:mb-10">
-                            {data.courses.map((course, index) => (
-                                <div className="my-1 courses p-1 bg-black/20 mr-2 rounded-md inline-block" key={index}>{course}</div>
-                            ))}
-                        </div>
                         <h1 className="mt-20 text-2xl font-bold">Languages and Technologies:</h1>
                         <div className="mt-5 mob:mt-1 tablet:mb-10">
                             {data.languages.map((course, index) => (
@@ -160,6 +154,12 @@ export default function Home() {
                             ))}
                             {data.technologies.map((course, index) => (
                                 <div className="my-1 courses p-1 bg-white/40 mr-2 rounded-md inline-block" key={index}>{course}</div>
+                            ))}
+                        </div>
+                        <h1 className="tablet:mt-20 mob:mt-10 text-2xl font-bold">Coursework:</h1>
+                        <div className="mt-5 mob:mt-1 tablet:mb-10">
+                            {data.courses.map((course, index) => (
+                                <div className="my-1 courses p-1 bg-black/20 mr-2 rounded-md inline-block" key={index}>{course}</div>
                             ))}
                         </div>
                     </div>

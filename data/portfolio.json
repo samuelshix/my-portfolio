@@ -159,7 +159,7 @@
         }
     ],
     "aboutpara": [
-        "Senior at Indiana University studying Software Engineering, minoring in History",
+        "Attended Indiana University studying Software Engineering, minoring in History",
         "Excited to continue exploring the rabbit hole of web development",
         "Love fishing, traveling, sci-fi novels"
     ],
@@ -173,22 +173,20 @@
     ],
     "languages": [
         "Javascript",
+        "Java",
         "Python",
-        "SQL",
-        "Java"
+        "SQL"
     ],
     "technologies": [
         "ReactJS",
+        "Java Spring",
+        "Tailwind",
+        "Kafka",
         "jQuery",
         "Django",
         "Django REST",
         "PostgreSQL",
         "Git",
-        "HTML",
-        "CSS",
-        "Linux",
-        "AWS",
-        "D3",
         "ChartJS",
         "Pandas"
     ]
