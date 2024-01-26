@@ -124,7 +124,8 @@
                 "Write JUnit tests, Cucumber functional tests and integration tests to ensure code quality and functionality across all systems",
                 "Addressed regular bugs and improvements in existing Java Spring services using Agile methodology and Jenkins CI/CD pipelines for rapid iteration",
                 "Lead production deployments by gaining approval from Product Owner and Product Manager, using Splunk and Dynatrace to monitor application health"
-            ]
+            ],
+            "imageSrc": "./images/jpm-logo.png"
         },
         {
             "title": "Elections Platform Engineering Intern @ The Washington Post",
@@ -133,14 +134,16 @@
                 "Refined CI/CD pipeline using Github Actions",
                 "Created Slack bot notification service using Python and Hasura event triggers to notify editors of new election results, resulting in a 50% reduction in time spent on manually checking for new results",
                 "Won hackathon for Chat GPT powered JavaScript Chrome extension to make articles more accessible to readers of cognitive disabilities, younger age, and different languages"
-            ]
+            ],
+            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Washington_Post_favicon.png"
         },
         {
             "title": "Software Engineer Intern @ Intellabridge",
             "description": [
                 "Built and deployed a series of cryptocurrency analytics tools to build company repertoire and legitimacy within the cryptocurrency community",
                 "Projects showcased in the 'Projects' section"
-            ]
+            ],
+            "imageSrc": "https://media.licdn.com/dms/image/C4E0BAQHBl1UaBsDGAA/company-logo_200_200/0/1630651008967/intellabridge_logo?e=2147483647&v=beta&t=DiZdKLAra98M1-SYZuzq2CgKlK3owwr6SvMilevh0HE"
         },
         {
             "title": "Cryptocurrency Analyst @ Intellabridge",
@@ -148,14 +151,16 @@
                 "Automate Postgresql data ingestion for company analytics dashboard via Github Actions and JS API script",
                 "Ingest, process and present blockchain data using SQL queries and Pandas",
                 "Present data analysis for these trends on Intellabridge’s YouTube, resulting in a doubling of total view count"
-            ]
+            ],
+            "imageSrc": "https://media.licdn.com/dms/image/C4E0BAQHBl1UaBsDGAA/company-logo_200_200/0/1630651008967/intellabridge_logo?e=2147483647&v=beta&t=DiZdKLAra98M1-SYZuzq2CgKlK3owwr6SvMilevh0HE"
         },
         {
             "title": "Frontend Developer @ Indiana Daily Student",
             "description": [
                 "Develop entire elections dashboard for 2022 Indiana midterms, featuring 30 elections and referendums, with live vote count updates via Chart.JS and Google Sheets API",
                 "Develop custom-coded web pages and visualizations via raw HTML/CSS, Bootstrap and JS to enhance online engagement and spread community awareness of critical issues"
-            ]
+            ],
+            "imageSrc": "https://duvq7ua50whdw.cloudfront.net/0f8bec24bf0a09bea31e42ea7ee08610/dist/img/favicons/android-chrome-512x512.png"
         }
     ],
     "aboutpara": [

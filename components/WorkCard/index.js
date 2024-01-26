@@ -19,7 +19,7 @@ const WorkCard = ({ img, desc, name, description, url }) => {
         </div>)
     }
     return (
-        <div className="overflow-hidden hover:text-white hover:shadow-xl bg-white/5 hover:bg-white/10 duration-300 cursor-pointer rounded-lg p-2 top-0 laptop:p-4 first:ml-0">
+        <div className="overflow-hidden hover:text-white hover:shadow-xl bg-black/5 hover:bg-black/10 duration-300 cursor-pointer rounded-lg p-2 top-0 laptop:p-4 first:ml-0">
             <h1 className="text-2xl font-medium">
                 {name ? name : "Project Name"}
             </h1>

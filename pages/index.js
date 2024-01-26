@@ -92,7 +92,7 @@ export default function Home() {
                     handleWorkScroll={handleWorkScroll}
                     handleAboutScroll={handleAboutScroll}
                 />
-                <div className="container mx-auto bg-white/10 backdrop-blur-sm px-10 py-5 mb-10 mob:px-3">
+                <div className="container mx-auto px-10 py-5 mb-10 mob:px-3">
                     <div
                         className="tablet:mt-20 desktop:mt-36 p-2 z-10 laptop:p-0 tablet:m-2 mob:mt-5 mob:w-full"
                         ref={workRef}
@@ -105,7 +105,12 @@ export default function Home() {
                                 <div className="mt-10 mob:mt-0 bg-white/10 rounded-md hover:text-white hover:shadow-xl hover:bg-white/20 duration-300"
                                     key={index}>
                                     <div className="w-full p-2 mob:p-4 rounded-lg transition-all ease-out duration-300">
-                                        <h1 className="text-3xl mob:text-2xl font-bold" >{service.title}</h1>
+                                        <h1 className="text-3xl mob:text-2xl font-bold inline-block">{service.title}</h1>
+                                        <img
+                                            alt={service.title.split("@")[1]}
+                                            src={service.imageSrc}
+                                            className="w-10 h-10 rounded-full inline-block ml-2 transform -translate-y-[2px]"
+                                        />
                                         <ul className="py-2 rounded-lg mt-1 text-md w-full opacity-80">
                                             {service.description.map((point, index) => (<li className="mb-2" key={index}>{"• " + point}</li>))
                                             }
@@ -120,21 +125,37 @@ export default function Home() {
                         ref={projectRef}
                         style={{ marginLeft: "auto", marginRight: "auto" }}
                     >
-                        <h1 className="text-4xl bg-indigo-500 p-5 inline-block rounded-t-xl text-indigo-100"><b>Favorite projects.</b></h1>
-                        <div className="laptop:px-12 bg-indigo-500 grid grid-cols-2 laptop:grid-cols-3 mob:grid-cols-1 gap-5 rounded-3xl rounded-tl-none py-10 text-indigo-50">
+                        <h1 className="text-4xl bg-indigo-500/20 backdrop-blur-sm p-5 inline-block rounded-t-xl text-indigo-900"><b>Favorite projects.</b></h1>
+                        <div className="laptop:px-12 bg-indigo-500/20 backdrop-blur-sm rounded-tr-3xl py-16">
+                            <h1 className="text-3xl mb-2 inline-block rounded-t-xl text-indigo-800"><b>Featured:</b></h1>
+                            <div>
+                                <h1 className="text-2xl inline-block rounded-t-xl text-indigo-800">Solana Snapshot</h1>
+                                <h1 className="text-md inline-block rounded-t-xl text-indigo-800 ml-2"> View your portfolio value over time</h1>
+                                <iframe className="w-full" height="315"
+                                    src="https://www.youtube.com/watch?v=yd4YSnJ7_Wg">
+                                </iframe>
+                            </div>
 
-                            {data.projects.map((project) => (
-                                <a href={project.url} rel="noreferrer" target="_blank" key={project.id}                            >
+                            {/* url={"test"}
+                            desc={"test"}
+                            name={"Solana Snapshot"}
+                            description={"j"}
+                            /> */}
+                            <div className="laptop:px-12 grid grid-cols-2 rounded-b-3xl laptop:grid-cols-3 mob:grid-cols-1 gap-5 py-10 text-indigo-900">
 
-                                    <WorkCard
-                                        img={project.imageSrc}
-                                        url={project.url}
-                                        desc={project.imageDesc}
-                                        name={project.title}
-                                        description={project.description}
-                                    />
-                                </a>
-                            ))}
+                                {data.projects.map((project) => (
+                                    <a href={project.url} rel="noreferrer" target="_blank" key={project.id}>
+
+                                        <WorkCard
+                                            img={project.imageSrc}
+                                            url={project.url}
+                                            desc={project.imageDesc}
+                                            name={project.title}
+                                            description={project.description}
+                                        />
+                                    </a>
+                                ))}
+                            </div>
                         </div>
                     </div>
 
