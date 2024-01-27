@@ -97,12 +97,12 @@ export default function Home() {
                         className="tablet:mt-20 desktop:mt-36 p-2 z-10 laptop:p-0 tablet:m-2 mob:mt-5 mob:w-full"
                         ref={workRef}
                     >
-                        <h1 className="text-4xl p-5 inline-block rounded-t-xl font-black bg-sky-600 text-sky-100">
+                        <h1 className="text-4xl p-5 inline-block rounded-t-xl font-black bg-sky-500/10 backdrop-blur-sm text-sky-900">
                             Professional Experience.
                         </h1>
-                        <div className="laptop:px-12 bg-sky-600 grid grid-cols-1 laptop:grid-cols-2 mob:grid-cols-1 gap-5 rounded-3xl rounded-tl-none py-16 text-indigo-50" style={{ marginLeft: "auto", marginRight: "auto" }}>
+                        <div className="laptop:px-12 bg-sky-500/10 backdrop-blur-sm grid grid-cols-1 laptop:grid-cols-2 mob:grid-cols-1 gap-5 rounded-3xl rounded-tl-none py-16 text-sky-800" style={{ marginLeft: "auto", marginRight: "auto" }}>
                             {data.other_projects.map((service, index) => (
-                                <div className="mt-10 mob:mt-0 bg-white/10 rounded-md hover:text-white hover:shadow-xl hover:bg-white/20 duration-300"
+                                <div className="mt-10 mob:mt-0 bg-white/30 rounded-xl hover:bg-black/10 hover:shadow-xl transition-all ease-out duration-50"
                                     key={index}>
                                     <div className="w-full p-2 mob:p-4 rounded-lg transition-all ease-out duration-300">
                                         <h1 className="text-3xl mob:text-2xl font-bold inline-block">{service.title}</h1>
@@ -126,7 +126,7 @@ export default function Home() {
                         style={{ marginLeft: "auto", marginRight: "auto" }}
                     >
                         <h1 className="text-4xl bg-indigo-500/20 backdrop-blur-sm p-5 inline-block rounded-t-xl text-indigo-900"><b>Favorite projects.</b></h1>
-                        <div className="laptop:px-12 bg-indigo-500/20 backdrop-blur-sm rounded-tr-3xl py-16">
+                        <div className="laptop:px-12 bg-indigo-500/20 backdrop-blur-sm rounded-3xl rounded-tl-none py-16">
                             <h1 className="text-3xl mb-2 inline-block rounded-t-xl text-indigo-800"><b>Featured:</b></h1>
                             <div>
                                 <h1 className="text-2xl inline-block rounded-t-xl text-indigo-800">Solana Snapshot</h1>
