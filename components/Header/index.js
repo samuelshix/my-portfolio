@@ -21,7 +21,7 @@ const Header = ({ handleProjectScroll, handleWorkScroll, handleAboutScroll }) =>
                             </h1>
                             <Popover.Button>
                                 <img
-                                    className="h-5"
+                                    className="h-3"
                                     src={`/images/${!open ? "menu.svg" : "cancel.svg"
                                         }`}
                                 ></img>
@@ -57,7 +57,7 @@ const Header = ({ handleProjectScroll, handleWorkScroll, handleAboutScroll }) =>
 
             <div style={{ position: "relative" }}>
                 <div
-                    className="sticky bg-slate-700/50 py-2 top-0 z-10 -mt-10 hidden tablet:flex header"
+                    className="sticky bg-gradient-to-r from-sky-500/10 to-indigo-500/20 py-2 top-0 z-10 -mt-10 hidden tablet:flex header"
                     style={{ marginTop: "64px" }}
                 >
                     <div className="flex flex-row items-center justify-between container mx-auto px-10">
@@ -70,10 +70,6 @@ const Header = ({ handleProjectScroll, handleWorkScroll, handleAboutScroll }) =>
                             </h1>
                         </Button>
                         <div className="flex">
-                            <img
-                                className="absolute w-[400px] bottom-[72px] "
-                                src="./images/profile-picture.png"
-                            ></img>
                             <Button onClick={handleWorkScroll}>Work</Button>
                             <Button onClick={handleProjectScroll}>Projects</Button>
                             <Button onClick={handleAboutScroll}>About</Button>

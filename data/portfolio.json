@@ -1,7 +1,7 @@
 {
     "name": "SAM SHI",
     "headerTaglineOne": "Hey, I'm Sam.",
-    "headerTaglineTwo": "A web developer",
+    "headerTaglineTwo": "A full stack engineer",
     "socials": [
         {
             "title": "Github",
@@ -18,7 +18,21 @@
     ],
     "projects": [
         {
-            "id": "1",
+            "title": "EasyRead for WaPo",
+            "description": "JavaScript, HTML, CSS, OpenAI API, Google Translate API",
+            "imageSrc": [],
+            "imageDesc": [],
+            "embeddedUrl": "https://www.youtube.com/embed/xai3CTXPgyo",
+            "url": "https://github.com/Yuyan-Lei/EasyRead-for-Wapo/blob/main/README.md"
+        },
+        {
+            "title": "Solana Snapshot",
+            "description": "NextJS, NodeJS, Prisma, Postgres",
+            "imageSrc": [],
+            "imageDesc": [],
+            "embeddedUrl": "https://www.youtube.com/embed/yd4YSnJ7_Wg"
+        },
+        {
             "title": "Kashflows",
             "description": "React, React Router, Django REST, recursive API method. Deployed to Vercel.",
             "imageSrc": [
@@ -36,7 +50,6 @@
             "url": "https://kashflows.vercel.app/"
         },
         {
-            "id": "2",
             "title": "Crypto Threads",
             "description": "jQuery/AJAX, ChartJS, Pandas, Django, Postgres, Deployed to Digital Ocean",
             "imageSrc": [
@@ -55,7 +68,6 @@
             ]
         },
         {
-            "id": "3",
             "title": "2022 Live Elections Dashboard",
             "description": "Sheetrocks, ChartJS, jQuery.",
             "imageSrc": [
@@ -67,7 +79,6 @@
             "url": "https://specials.idsnews.com/live-election-update-monroe-county-2022/"
         },
         {
-            "id": "4",
             "title": "Heatmaps",
             "description": "React, ChartJS, ChromaJS. Deployed to Vercel.",
             "imageSrc": [
@@ -79,7 +90,6 @@
             "url": "https://heatmaps.vercel.app/"
         },
         {
-            "id": "5",
             "title": "Voting Quiz Buildout 2022",
             "description": "HTML/CSS/JS/jQuery",
             "imageSrc": [
@@ -91,7 +101,6 @@
             ]
         },
         {
-            "id": "6",
             "title": "Voting Quiz Buildout 2020",
             "description": "HTML/CSS/JS",
             "imageSrc": [
@@ -103,7 +112,6 @@
             ]
         },
         {
-            "id": "7",
             "title": "Hope Church Allegations Buildout",
             "description": "Coded website for breaking story covering abuse by local pastor, including an interactive timeline for the events unfolding in the story",
             "imageSrc": [
@@ -163,12 +171,8 @@
             "imageSrc": "https://duvq7ua50whdw.cloudfront.net/0f8bec24bf0a09bea31e42ea7ee08610/dist/img/favicons/android-chrome-512x512.png"
         }
     ],
-    "aboutpara": [
-        "Attended Indiana University studying Software Engineering, minoring in History",
-        "Excited to continue exploring the rabbit hole of web development",
-        "Love fishing, traveling, sci-fi novels"
-    ],
     "courses": [
+        "Algorithm Design and Analysis",
         "Software Engineering",
         "Data Analysis and Mining",
         "Artificial Intelligence",
@@ -183,16 +187,18 @@
         "SQL"
     ],
     "technologies": [
-        "ReactJS",
         "Java Spring",
-        "Tailwind",
         "Kafka",
+        "Jmeter",
+        "Splunk",
+        "Dynatrace",
+        "TailwindCSS",
+        "PostgreSQL",
+        "ReactJS",
         "jQuery",
         "Django",
         "Django REST",
-        "PostgreSQL",
         "Git",
-        "ChartJS",
-        "Pandas"
+        "ChartJS"
     ]
 }

@@ -1,6 +1,5 @@
 import { useRef } from "react";
 import Header from "../components/Header";
-import ServiceCard from "../components/ServiceCard";
 import Socials from "../components/Socials";
 import WorkCard from "../components/WorkCard";
 import { useIsomorphicLayoutEffect } from "../utils";
@@ -10,6 +9,7 @@ import Head from "next/head";
 import Button from "../components/Button"
 // Local Data
 import data from "../data/portfolio.json";
+import { Parallax } from "react-scroll-parallax";
 
 export default function Home() {
     // Ref
@@ -59,34 +59,39 @@ export default function Home() {
     return (
         <>
             <Head>
-                <Button></Button>
+                {/* <Button></Button>
                 <title>{data.name}</title>
-                <script async src="https://www.googletagmanager.com/gtag/js?id=G-2N3FBN7X6J"></script>
+                <script async src="https://www.googletagmanager.com/gtag/js?id=G-2N3FBN7X6J"></script> */}
             </Head>
             <div>
-                <div className="container mx-auto bg-white/10 backdrop-blur-sm px-10 pb-10 mob:px-3">
-                    <div className="mt-24">
-                        <div className="mt-5">
-                            <h1
-                                ref={textOne}
-                                className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 font-black underline w-4/5 mob:w-full laptop:w-4/5"
-                            >
-                                {data.headerTaglineOne}
-                            </h1>
-                            <b>
-                                <p
-                                    ref={textTwo}
-                                    className="text-3sm p-2"
+                <div className="container mx-auto mt-24">
+                    <Parallax speed={20}>
+                        <div className="bg-white/10 w-2/3 backdrop-blur-sm px-10 py-5 pb-10 mob:px-3 flex flex-row">
+                            <div className="mr-5">
+                                <h1
+                                    ref={textOne}
+                                    className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 font-black underline w-4/5 mob:w-full laptop:w-4/5"
                                 >
-                                    {data.headerTaglineTwo}
-                                </p>
-                            </b>
+                                    {data.headerTaglineOne}
+                                </h1>
+                                <b>
+                                    <p
+                                        ref={textTwo}
+                                        className="text-3sm p-2"
+                                    >
+                                        {data.headerTaglineTwo}
+                                    </p>
+                                </b>
+
+                                <Socials className="mt-0" />
+                            </div>
+                            <img
+                                className="h-72 bottom-[72px] border-4 border-white rounded-full shadow-lg"
+                                src="./images/profile-picture.jpeg"
+                            ></img>
                         </div>
-
-                        <Socials className="mt-0" />
-                    </div>
+                    </Parallax>
                 </div>
-
                 <Header
                     handleProjectScroll={handleProjectScroll}
                     handleWorkScroll={handleWorkScroll}
@@ -102,7 +107,7 @@ export default function Home() {
                         </h1>
                         <div className="laptop:px-12 bg-sky-500/10 backdrop-blur-sm grid grid-cols-1 laptop:grid-cols-2 mob:grid-cols-1 gap-5 rounded-3xl rounded-tl-none py-16 text-sky-800" style={{ marginLeft: "auto", marginRight: "auto" }}>
                             {data.other_projects.map((service, index) => (
-                                <div className="mt-10 mob:mt-0 bg-white/30 rounded-xl hover:bg-black/10 hover:shadow-xl transition-all ease-out duration-50"
+                                <div className="mt-10 mob:mt-0 bg-white/40 rounded-xl"
                                     key={index}>
                                     <div className="w-full p-2 mob:p-4 rounded-lg transition-all ease-out duration-300">
                                         <h1 className="text-3xl mob:text-2xl font-bold inline-block">{service.title}</h1>
@@ -127,22 +132,13 @@ export default function Home() {
                     >
                         <h1 className="text-4xl bg-indigo-500/20 backdrop-blur-sm p-5 inline-block rounded-t-xl text-indigo-900"><b>Favorite projects.</b></h1>
                         <div className="laptop:px-12 bg-indigo-500/20 backdrop-blur-sm rounded-3xl rounded-tl-none py-16">
-                            <h1 className="text-3xl mb-2 inline-block rounded-t-xl text-indigo-800"><b>Featured:</b></h1>
-                            <div>
-                                <h1 className="text-2xl inline-block rounded-t-xl text-indigo-800">Solana Snapshot</h1>
-                                <h1 className="text-md inline-block rounded-t-xl text-indigo-800 ml-2"> View your portfolio value over time</h1>
-                                <iframe className="w-full" height="315"
-                                    src="https://www.youtube.com/watch?v=yd4YSnJ7_Wg">
-                                </iframe>
-                            </div>
 
                             {/* url={"test"}
                             desc={"test"}
                             name={"Solana Snapshot"}
                             description={"j"}
                             /> */}
-                            <div className="laptop:px-12 grid grid-cols-2 rounded-b-3xl laptop:grid-cols-3 mob:grid-cols-1 gap-5 py-10 text-indigo-900">
-
+                            <div className="laptop:px-12 grid grid-cols-2 rounded-b-3xl laptop:grid-cols-2 mob:grid-cols-1 gap-5 py-10 text-indigo-900">
                                 {data.projects.map((project) => (
                                     <a href={project.url} rel="noreferrer" target="_blank" key={project.id}>
 
@@ -152,6 +148,7 @@ export default function Home() {
                                             desc={project.imageDesc}
                                             name={project.title}
                                             description={project.description}
+                                            embeddedUrl={project.embeddedUrl}
                                         />
                                     </a>
                                 ))}
@@ -164,24 +161,28 @@ export default function Home() {
                         ref={aboutRef}
                     >
                         <h1 className="tablet:my-1 text-4xl font-bold">About.</h1>
-                        <ul className="tablet:mb-20 mt-1 w-full">
-                            {data.aboutpara.map((point, index) => (<li key={index}>{"• " + point}</li>))
-                            }
-                        </ul>
-                        <h1 className="mt-20 text-2xl font-bold">Languages and Technologies:</h1>
-                        <div className="mt-5 mob:mt-1 tablet:mb-10">
-                            {data.languages.map((course, index) => (
-                                <div className="my-1 courses p-1 bg-white/30 mr-2 rounded-md inline-block" key={index}>{course}</div>
-                            ))}
-                            {data.technologies.map((course, index) => (
-                                <div className="my-1 courses p-1 bg-white/40 mr-2 rounded-md inline-block" key={index}>{course}</div>
-                            ))}
-                        </div>
-                        <h1 className="tablet:mt-20 mob:mt-10 text-2xl font-bold">Coursework:</h1>
-                        <div className="mt-5 mob:mt-1 tablet:mb-10">
-                            {data.courses.map((course, index) => (
-                                <div className="my-1 courses p-1 bg-black/20 mr-2 rounded-md inline-block" key={index}>{course}</div>
-                            ))}
+                        <p>I attended Indiana University, where I majored in Software Engineering and minored in History. I'm genuinely excited about continuing to explore the fascinating world of web development. In my free time, I love fishing, traveling to new places, and diving into sci-fi novels.</p>
+                        <div className="grid grid-cols-2">
+                            <div>
+                                <h1 className="mt-20 text-2xl font-bold">Languages and Technologies:</h1>
+                                <div className="mt-5 mob:mt-1 tablet:mb-10">
+                                    {data.languages.map((course, index) => (
+                                        <div className="my-1 courses p-1 bg-white/30 mr-2 rounded-md inline-block" key={index}>{course}</div>
+                                    ))}
+                                    {data.technologies.map((course, index) => (
+                                        <div className="my-1 courses p-1 bg-white/40 mr-2 rounded-md inline-block" key={index}>{course}</div>
+                                    ))}
+
+                                </div>
+                            </div>
+                            <div>
+                                <h1 className="tablet:mt-20 mob:mt-10 text-2xl font-bold">Coursework:</h1>
+                                <div className="mt-5 mob:mt-1 tablet:mb-10">
+                                    {data.courses.map((course, index) => (
+                                        <div className="my-1 courses p-1 bg-black/20 mr-2 rounded-md inline-block" key={index}>{course}</div>
+                                    ))}
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <Footer />

@@ -2,14 +2,12 @@ import React from "react";
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-import data from "../../data/portfolio.json";
-
 // for project feature slide shows
-const WorkCard = ({ img, desc, name, description, url }) => {
+const WorkCard = ({ img, desc, name, description, embeddedUrl, url }) => {
     let images = []
     for (let i = 0; i < img.length; i++) {
         const element = img[i];
-        images.push(<div>
+        images.push(<div key={i}>
             <img
                 alt={name}
                 className="h-full w-full object-cover max-h-96"
@@ -19,13 +17,18 @@ const WorkCard = ({ img, desc, name, description, url }) => {
         </div>)
     }
     return (
-        <div className="overflow-hidden hover:text-white hover:shadow-xl bg-black/5 hover:bg-black/10 duration-300 cursor-pointer rounded-lg p-2 top-0 laptop:p-4 first:ml-0">
+        <div className="overflow-hidden rounded-lg p-2 top-0 laptop:p-4 first:ml-0">
             <h1 className="text-2xl font-medium">
                 {name ? name : "Project Name"}
             </h1>
             <h2 className="text-xl opacity-80">
                 {description ? description : "Description"}
             </h2>
+            {url &&
+                <div>
+                    <a href={url}>Project Link</a>
+                </div>
+            }
             <div>
                 {(img.length > 1) ?
                     <Carousel
@@ -33,6 +36,12 @@ const WorkCard = ({ img, desc, name, description, url }) => {
                     >{images}</Carousel>
                     : images[0]
                 }
+            </div>
+            <div>
+                {embeddedUrl &&
+                    <iframe className="w-full" height="315"
+                        src={embeddedUrl}>
+                    </iframe>}
             </div>
         </div>
     );
