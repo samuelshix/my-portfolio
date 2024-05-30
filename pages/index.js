@@ -67,14 +67,14 @@ export default function Home() {
                 <div className="container mx-auto">
                     <Parallax speed={20}>
                         <div className="bg-white/10 w-2/3 backdrop-blur-sm px-10 py-5 pb-10 mob:px-3 flex flex-row mt-36 mx-auto">
-                            <div className="mr-5">
+                            <div className="mr-5 flex flex-col">
                                 <h1
                                     ref={textOne}
                                     className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 font-black underline w-4/5 mob:w-full laptop:w-4/5"
                                 >
                                     Hey, I&apos;m Sam.
                                 </h1>
-                                <b>
+                                <b className="flex-grow">
                                     <p
                                         ref={textTwo}
                                         className="text-3sm p-2"
@@ -83,7 +83,7 @@ export default function Home() {
                                     </p>
                                 </b>
 
-                                <Socials className="relative bottom-0 mt-auto" />
+                                <Socials className="relative bottom-0 mt-auto flex-none" />
                             </div>
                             <img
                                 className="h-72 bottom-[72px] border-4 border-white rounded-full shadow-lg"
