@@ -7,6 +7,7 @@ import { stagger } from "../animations";
 import Footer from "../components/Footer";
 import Head from "next/head";
 import Button from "../components/Button"
+import Image from "next/image";
 // Local Data
 import data from "../data/portfolio.json";
 import { Parallax } from "react-scroll-parallax";
@@ -58,37 +59,36 @@ export default function Home() {
 
     return (
         <>
-            <Head>
-                {/* <Button></Button>
+            {/* <Head>
                 <title>{data.name}</title>
-                <script async src="https://www.googletagmanager.com/gtag/js?id=G-2N3FBN7X6J"></script> */}
-            </Head>
+                <script async src="https://www.googletagmanager.com/gtag/js?id=G-2N3FBN7X6J"></script>
+            </Head> */}
             <div>
-                <div className="container mx-auto mt-24">
+                <div className="container mx-auto">
                     <Parallax speed={20}>
-                        <div className="bg-white/10 w-2/3 backdrop-blur-sm px-10 py-5 pb-10 mob:px-3 flex flex-row">
+                        <div className="bg-white/10 w-2/3 backdrop-blur-sm px-10 py-5 pb-10 mob:px-3 flex flex-row mt-36 mx-auto">
                             <div className="mr-5">
                                 <h1
                                     ref={textOne}
                                     className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 font-black underline w-4/5 mob:w-full laptop:w-4/5"
                                 >
-                                    {data.headerTaglineOne}
+                                    Hey, I&apos;m Sam.
                                 </h1>
                                 <b>
                                     <p
                                         ref={textTwo}
                                         className="text-3sm p-2"
                                     >
-                                        {data.headerTaglineTwo}
+                                        A full stack engineer
                                     </p>
                                 </b>
 
-                                <Socials className="mt-0" />
+                                <Socials className="relative bottom-0 mt-auto" />
                             </div>
                             <img
                                 className="h-72 bottom-[72px] border-4 border-white rounded-full shadow-lg"
                                 src="./images/profile-picture.jpeg"
-                            ></img>
+                            />
                         </div>
                     </Parallax>
                 </div>
@@ -161,7 +161,7 @@ export default function Home() {
                         ref={aboutRef}
                     >
                         <h1 className="tablet:my-1 text-4xl font-bold">About.</h1>
-                        <p>I attended Indiana University, where I majored in Software Engineering and minored in History. I'm genuinely excited about continuing to explore the fascinating world of web development. In my free time, I love fishing, traveling to new places, and diving into sci-fi novels.</p>
+                        <p>I attended Indiana University, where I majored in Software Engineering and minored in History. I&apos;m genuinely excited about continuing to explore the fascinating world of web development. In my free time, I love fishing, traveling to new places, and diving into sci-fi novels.</p>
                         <div className="grid grid-cols-2">
                             <div>
                                 <h1 className="mt-20 text-2xl font-bold">Languages and Technologies:</h1>
