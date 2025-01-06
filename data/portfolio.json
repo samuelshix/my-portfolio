@@ -45,7 +45,7 @@
                 "Kash-flows allows you to visualize the flow of Ethereum tokens from one wallet to another, using a recursive API call to query the blockchain. Technologies used: ReactJS, Django REST. Heroku/Vercel, ReactFlow, D3",
                 "Data is then passed to the React frontend via a Django REST API, and a graph of transactions and wallets is displayed on the page using ReactFlow and D3.",
                 "Users may input a timeframe to search transactions as an option, however they are required to input a wallet address to search from.",
-                "I posted this website on Reddit for feedback, and boy did we do just that! As of 8/3/2022, my post is sitting at 8.7k views!"
+                "I posted this website on Reddit for feedback, and as of 8/3/2022, my post is sitting at 8.7k views!"
             ],
             "url": "https://kashflows.vercel.app/"
         },
@@ -126,7 +126,7 @@
     "other_rel_projects": [],
     "other_projects": [
         {
-            "title": "Software Engineer @ JP Morgan Chase",
+            "title": "SWE @ JP Morgan Chase",
             "description": [
                 "Create performance tests in Jmeter by writing events to Kafka topics and consuming them in Java Spring services to simulate real world load on the system",
                 "Write JUnit tests, Cucumber functional tests and integration tests to ensure code quality and functionality across all systems",
@@ -136,7 +136,7 @@
             "imageSrc": "./images/jpm-logo.png"
         },
         {
-            "title": "Elections Platform Engineering Intern @ The Washington Post",
+            "title": "SWE Intern (Platform) @ The Washington Post",
             "description": [
                 "Enabled end to end election race call functionality via development of editorial election tool in Remix, Python data pipelines and end to end integrations via Hasura GraphQL Actions",
                 "Refined CI/CD pipeline using Github Actions",
