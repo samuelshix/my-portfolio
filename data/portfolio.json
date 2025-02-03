@@ -265,19 +265,20 @@
     ],
     "languages": [
         "Javascript",
+        "Typescript",
         "Java",
-        "Python",
-        "SQL"
+        "Python"
     ],
     "technologies": [
         "Java Spring",
+        "React",
         "Kafka",
-        "Jmeter",
+        "JUnit",
+        "Jest",
+        "NodeJS",
         "Splunk",
-        "Dynatrace",
-        "TailwindCSS",
-        "PostgreSQL",
-        "ReactJS",
+        "SQL",
+        "React",
         "jQuery",
         "Django",
         "Django REST",

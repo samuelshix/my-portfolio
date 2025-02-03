@@ -123,28 +123,45 @@ const Section = React.forwardRef(({ title, data, bgColor, textColor }, ref) => (
 ));
 
 const AboutSection = React.forwardRef(({ data }, ref) => (
-    <div className="mt-5 laptop:mt-20 tablet:mt-10 p-5 bg-teal-700 text-white rounded-2xl" ref={ref}>
-        <h1 className="tablet:my-1 text-4xl font-bold">About.</h1>
-        <p>I attended Indiana University, where I majored in Software Engineering and minored in History. I&apos;m genuinely excited about continuing to explore the fascinating world of web development. In my free time, I love fishing, traveling to new places, and diving into sci-fi novels.</p>
-        <div className="grid grid-cols-2">
+    //     <div className="container mx-auto mt-16 ">
+    //     <h1 className={`text-4xl inline-block rounded-t-xl font-black ${textColor}`}>
+    //         {title}
+    //     </h1>
+    // </div>
+    // <div className={`${bgColor} container mx-auto rounded-xl`} ref={ref}>
+    //     <div className={`backdrop-blur-sm grid grid-cols-1 laptop:grid-cols-2 mob:grid-cols-1 gap-5 p-8 ${textColor} rounded-xl`} style={{ marginLeft: "auto", marginRight: "auto" }}>
+    <div className="container mx-auto mt-16" ref={ref}>
+        <h1 className="tablet:my-1 text-4xl text-violet-700 font-bold">About.</h1>
+        <div className="bg-violet-700/80 rounded-xl text-white p-5">
             <div>
-                <h1 className="mt-20 text-2xl font-bold">Languages and Technologies:</h1>
-                <div className="mt-5 mob:mt-1 tablet:mb-10">
-                    {data.languages.map((course, index) => (
-                        <div className="my-1 courses p-1 bg-white/30 mr-2 rounded-md inline-block" key={index}>{course}</div>
-                    ))}
-                    {data.technologies.map((course, index) => (
-                        <div className="my-1 courses p-1 bg-white/40 mr-2 rounded-md inline-block" key={index}>{course}</div>
-                    ))}
+                <p>Software Engineer skilled in Java and TypeScript, with experience in building scalable distributed systems and RESTful APIs. Proficient in cloud services and automation using Kafka, Jenkins, and JPMC's Gaia Cloud. Strong collaborator focused on delivering high-quality, user-friendly solutions.</p>
+            </div>
+            <div className="grid grid-cols-2">
+                <div>
+                    <h1 className="mt-20 text-2xl font-bold">Languages and Technologies:</h1>
+                    <div className="mt-5 mob:mt-1 tablet:mb-10">
+                        {data.languages.map((course, index) => (
+                            <div className="my-1 courses p-1 bg-white/30 mr-2 rounded-md inline-block" key={index}>{course}</div>
+                        ))}
+                        {data.technologies.map((course, index) => (
+                            <div className="my-1 courses p-1 bg-white/40 mr-2 rounded-md inline-block" key={index}>{course}</div>
+                        ))}
 
+                    </div>
+                </div>
+                <div>
+                    <h1 className="tablet:mt-20 mob:mt-10 text-2xl font-bold">Coursework:</h1>
+                    <div className="mt-5 mob:mt-1 tablet:mb-10">
+                        {data.courses.map((course, index) => (
+                            <div className="my-1 courses p-1 bg-black/20 mr-2 rounded-md inline-block" key={index}>{course}</div>
+                        ))}
+                    </div>
                 </div>
             </div>
-            <div>
-                <h1 className="tablet:mt-20 mob:mt-10 text-2xl font-bold">Coursework:</h1>
-                <div className="mt-5 mob:mt-1 tablet:mb-10">
-                    {data.courses.map((course, index) => (
-                        <div className="my-1 courses p-1 bg-black/20 mr-2 rounded-md inline-block" key={index}>{course}</div>
-                    ))}
+            <div className="rounded-2xl mt-10">
+                <h1 className="text-2xl font-bold">Contact.</h1>
+                <div className="mt-3">
+                    <Socials />
                 </div>
             </div>
         </div>
