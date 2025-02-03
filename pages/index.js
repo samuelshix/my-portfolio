@@ -82,7 +82,7 @@ export default function Home() {
                 handleWorkScroll={() => scrollToSection(workRef)}
                 handleAboutScroll={() => scrollToSection(aboutRef)}
             />
-            <div className="mx-auto mt-16 py-5 mb-10">
+            <div className="mx-auto mt-16 py-5 mb-10 container">
                 <Section
                     title="Professional Experience."
                     ref={workRef}
@@ -107,7 +107,7 @@ export default function Home() {
 
 const Section = React.forwardRef(({ title, data, bgColor, textColor }, ref) => {
     return (
-        <div className={`${bgColor} container mx-auto rounded-xl`} ref={ref}>
+        <div className={`${bgColor} container mx-auto rounded-xl mb-20`} ref={ref}>
             <div className={`backdrop-blur-sm grid grid-cols-1 laptop:grid-cols-4 mob:grid-cols-1 gap-5 p-8 ${textColor} rounded-xl`}>
                 {data.map((item, index) => (
                     <div key={index} className={`${index === 0 ? 'laptop:col-span-3' : ''}`}>
@@ -123,36 +123,38 @@ Section.displayName = 'Section';
 const AboutSection = React.forwardRef(({ data }, ref) => {
     return (
         <div className="mt-5 laptop:mt-20 tablet:mt-10 p-5 bg-teal-700 text-white rounded-2xl" ref={ref}>
-            <h1 className="tablet:my-1 text-4xl font-bold">About.</h1>
-            <p>
-                I attended Indiana University, where I majored in Software Engineering and minored in History. I&apos;m genuinely excited about continuing to explore the fascinating world of web development. In my free time, I love fishing, traveling to new places, and diving into sci-fi novels.
-            </p>
-            <div className="grid grid-cols-2">
-                <div>
-                    <h1 className="mt-20 text-2xl font-bold">Languages and Technologies:</h1>
-                    <div className="mt-5 mob:mt-1 tablet:mb-10">
-                        {data.languages.map((course, index) => (
-                            <div className="my-1 courses p-1 bg-white/30 mr-2 rounded-md inline-block" key={index}>{course}</div>
-                        ))}
-                        {data.technologies.map((course, index) => (
-                            <div className="my-1 courses p-1 bg-white/40 mr-2 rounded-md inline-block" key={index}>{course}</div>
-                        ))}
+            <div className="bg-white/30 m-5 p-5 rounded-xl">
+                <h1 className="tablet:my-1 text-4xl font-bold">About.</h1>
+                <p>
+                    I attended Indiana University, where I majored in Software Engineering and minored in History. I&apos;m genuinely excited about continuing to explore the fascinating world of web development. In my free time, I love fishing, traveling to new places, and diving into sci-fi novels.
+                </p>
+                <div className="grid grid-cols-2">
+                    <div>
+                        <h1 className="mt-20 text-2xl font-bold">Languages and Technologies:</h1>
+                        <div className="mt-5 mob:mt-1 tablet:mb-10">
+                            {data.languages.map((course, index) => (
+                                <div className="my-1 courses p-1 bg-white/30 mr-2 rounded-md inline-block" key={index}>{course}</div>
+                            ))}
+                            {data.technologies.map((course, index) => (
+                                <div className="my-1 courses p-1 bg-white/40 mr-2 rounded-md inline-block" key={index}>{course}</div>
+                            ))}
 
+                        </div>
+                    </div>
+                    <div>
+                        <h1 className="tablet:mt-20 mob:mt-10 text-2xl font-bold">Coursework:</h1>
+                        <div className="mt-5 mob:mt-1 tablet:mb-10">
+                            {data.courses.map((course, index) => (
+                                <div className="my-1 courses p-1 bg-black/20 mr-2 rounded-md inline-block" key={index}>{course}</div>
+                            ))}
+                        </div>
                     </div>
                 </div>
-                <div>
-                    <h1 className="tablet:mt-20 mob:mt-10 text-2xl font-bold">Coursework:</h1>
-                    <div className="mt-5 mob:mt-1 tablet:mb-10">
-                        {data.courses.map((course, index) => (
-                            <div className="my-1 courses p-1 bg-black/20 mr-2 rounded-md inline-block" key={index}>{course}</div>
-                        ))}
+                <div className="rounded-2xl mt-10">
+                    <h1 className="text-2xl font-bold">Contact.</h1>
+                    <div className="mt-3">
+                        <Socials />
                     </div>
-                </div>
-            </div>
-            <div className="rounded-2xl mt-10">
-                <h1 className="text-2xl font-bold">Contact.</h1>
-                <div className="mt-3">
-                    <Socials />
                 </div>
             </div>
         </div>
