@@ -18,23 +18,46 @@
     ],
     "projects": [
         {
+            "title": "Portfolio Snapshot",
+            "description": [
+                "React",
+                "TypeScript",
+                "NodeJS",
+                "Jest",
+                "Prisma",
+                "Solana APIs",
+                "Github Actions",
+                "Railway",
+                "Vercel"
+            ],
+            "imageSrc": [
+                "./images/portfolio-snapshot.png"
+            ],
+            "url": "https://github.com/samuelshix/portfolio-snapshot"
+        },
+        {
             "title": "EasyRead for WaPo",
-            "description": "JavaScript, HTML, CSS, OpenAI API, Google Translate API",
+            "description": [
+                "JavaScript",
+                "HTML",
+                "CSS",
+                "OpenAI API",
+                "Google Translate API"
+            ],
             "imageSrc": [],
             "imageDesc": [],
             "embeddedUrl": "https://www.youtube.com/embed/xai3CTXPgyo",
             "url": "https://github.com/Yuyan-Lei/EasyRead-for-Wapo/blob/main/README.md"
         },
         {
-            "title": "Solana Snapshot",
-            "description": "NextJS, NodeJS, Prisma, Postgres",
-            "imageSrc": [],
-            "imageDesc": [],
-            "embeddedUrl": "https://www.youtube.com/embed/yd4YSnJ7_Wg"
-        },
-        {
             "title": "Kashflows",
-            "description": "React, React Router, Django REST, recursive API method. Deployed to Vercel.",
+            "description": [
+                "React",
+                "Django REST",
+                "ReactFlow",
+                "D3",
+                "Vercel"
+            ],
             "imageSrc": [
                 "./images/flows-1.png",
                 "./images/flows-2.png",
@@ -44,14 +67,35 @@
             "imageDesc": [
                 "Kash-flows allows you to visualize the flow of Ethereum tokens from one wallet to another, using a recursive API call to query the blockchain. Technologies used: ReactJS, Django REST. Heroku/Vercel, ReactFlow, D3",
                 "Data is then passed to the React frontend via a Django REST API, and a graph of transactions and wallets is displayed on the page using ReactFlow and D3.",
-                "Users may input a timeframe to search transactions as an option, however they are required to input a wallet address to search from.",
-                "I posted this website on Reddit for feedback, and as of 8/3/2022, my post is sitting at 8.7k views!"
+                "Users may input a timeframe to search transactions as an option, however they are required to input a wallet address to search from."
             ],
             "url": "https://kashflows.vercel.app/"
         },
         {
+            "title": "Solana Snapshot",
+            "description": [
+                "NextJS",
+                "Web3.js",
+                "NodeJS",
+                "Prisma",
+                "Solana APIs",
+                "NFT Generation APIs"
+            ],
+            "imageSrc": [],
+            "imageDesc": [],
+            "embeddedUrl": "https://www.youtube.com/embed/yd4YSnJ7_Wg"
+        },
+        {
             "title": "Crypto Threads",
-            "description": "jQuery/AJAX, ChartJS, Pandas, Django, Postgres, Deployed to Digital Ocean",
+            "description": [
+                "jQuery",
+                "AJAX",
+                "ChartJS",
+                "Pandas",
+                "Django",
+                "PostgreSQL",
+                "Digital Ocean"
+            ],
             "imageSrc": [
                 "./images/threads-1.png",
                 "./images/threads-3.png",
@@ -69,7 +113,11 @@
         },
         {
             "title": "2022 Live Elections Dashboard",
-            "description": "Sheetrocks, ChartJS, jQuery.",
+            "description": [
+                "Sheetrocks",
+                "ChartJS",
+                "jQuery"
+            ],
             "imageSrc": [
                 "https://i.postimg.cc/6qPjmBNk/election-Live-Updates.png"
             ],
@@ -80,7 +128,12 @@
         },
         {
             "title": "Heatmaps",
-            "description": "React, ChartJS, ChromaJS. Deployed to Vercel.",
+            "description": [
+                "React",
+                "ChartJS",
+                "ChromaJS",
+                "Vercel"
+            ],
             "imageSrc": [
                 "https://i.postimg.cc/3JgdBkhs/Heatmaps.png"
             ],
@@ -91,7 +144,12 @@
         },
         {
             "title": "Voting Quiz Buildout 2022",
-            "description": "HTML/CSS/JS/jQuery",
+            "description": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "jQuery"
+            ],
             "imageSrc": [
                 "./images/voting2.png"
             ],
@@ -102,7 +160,11 @@
         },
         {
             "title": "Voting Quiz Buildout 2020",
-            "description": "HTML/CSS/JS",
+            "description": [
+                "HTML",
+                "CSS",
+                "JavaScript"
+            ],
             "imageSrc": [
                 "./images/voting.png"
             ],
@@ -113,7 +175,12 @@
         },
         {
             "title": "Hope Church Allegations Buildout",
-            "description": "Coded website for breaking story covering abuse by local pastor, including an interactive timeline for the events unfolding in the story",
+            "description": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "jQuery"
+            ],
             "imageSrc": [
                 "https://i.postimg.cc/cLcfhv70/hope-church.png"
             ],
@@ -126,47 +193,63 @@
     "other_rel_projects": [],
     "other_projects": [
         {
-            "title": "SWE @ JP Morgan Chase",
+            "title": "Software Engineer 2 @ JP Morgan Chase",
             "description": [
-                "Create performance tests in Jmeter by writing events to Kafka topics and consuming them in Java Spring services to simulate real world load on the system",
-                "Write JUnit tests, Cucumber functional tests and integration tests to ensure code quality and functionality across all systems",
-                "Addressed regular bugs and improvements in existing Java Spring services using Agile methodology and Jenkins CI/CD pipelines for rapid iteration",
-                "Lead production deployments by gaining approval from Product Owner and Product Manager, using Splunk and Dynatrace to monitor application health"
+                "Java Spring",
+                "React",
+                "Jenkins",
+                "REST API",
+                "Gaia Cloud",
+                "Kafka",
+                "Splunk"
+            ],
+            "imageSrc": "./images/jpm-logo.png"
+        },
+        {
+            "title": "Software Engineer 1 @ JP Morgan Chase",
+            "description": [
+                "Java Spring",
+                "Jenkins",
+                "REST API",
+                "Gaia Cloud",
+                "Kafka",
+                "Splunk"
             ],
             "imageSrc": "./images/jpm-logo.png"
         },
         {
             "title": "SWE Intern (Platform) @ The Washington Post",
             "description": [
-                "Enabled end to end election race call functionality via development of editorial election tool in Remix, Python data pipelines and end to end integrations via Hasura GraphQL Actions",
-                "Refined CI/CD pipeline using Github Actions",
-                "Created Slack bot notification service using Python and Hasura event triggers to notify editors of new election results, resulting in a 50% reduction in time spent on manually checking for new results",
-                "Won hackathon for Chat GPT powered JavaScript Chrome extension to make articles more accessible to readers of cognitive disabilities, younger age, and different languages"
+                "Python",
+                "React",
+                "Redux",
+                "Hasura",
+                "AWS",
+                "GraphQL"
             ],
             "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Washington_Post_favicon.png"
         },
         {
             "title": "Software Engineer Intern @ Intellabridge",
             "description": [
-                "Built and deployed a series of cryptocurrency analytics tools to build company repertoire and legitimacy within the cryptocurrency community",
-                "Projects showcased in the 'Projects' section"
-            ],
-            "imageSrc": "https://media.licdn.com/dms/image/C4E0BAQHBl1UaBsDGAA/company-logo_200_200/0/1630651008967/intellabridge_logo?e=2147483647&v=beta&t=DiZdKLAra98M1-SYZuzq2CgKlK3owwr6SvMilevh0HE"
-        },
-        {
-            "title": "Cryptocurrency Analyst @ Intellabridge",
-            "description": [
-                "Automate Postgresql data ingestion for company analytics dashboard via Github Actions and JS API script",
-                "Ingest, process and present blockchain data using SQL queries and Pandas",
-                "Present data analysis for these trends on Intellabridge’s YouTube, resulting in a doubling of total view count"
+                "React",
+                "ChartJS",
+                "D3.js",
+                "Django REST",
+                "PostgreSQL",
+                "Vercel"
             ],
             "imageSrc": "https://media.licdn.com/dms/image/C4E0BAQHBl1UaBsDGAA/company-logo_200_200/0/1630651008967/intellabridge_logo?e=2147483647&v=beta&t=DiZdKLAra98M1-SYZuzq2CgKlK3owwr6SvMilevh0HE"
         },
         {
             "title": "Frontend Developer @ Indiana Daily Student",
             "description": [
-                "Develop entire elections dashboard for 2022 Indiana midterms, featuring 30 elections and referendums, with live vote count updates via Chart.JS and Google Sheets API",
-                "Develop custom-coded web pages and visualizations via raw HTML/CSS, Bootstrap and JS to enhance online engagement and spread community awareness of critical issues"
+                "HTML/CSS",
+                "JavaScript",
+                "jQuery",
+                "ChartJS",
+                "Google Sheets API",
+                "Bootstrap"
             ],
             "imageSrc": "https://duvq7ua50whdw.cloudfront.net/0f8bec24bf0a09bea31e42ea7ee08610/dist/img/favicons/android-chrome-512x512.png"
         }

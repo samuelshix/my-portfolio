@@ -11,35 +11,20 @@ import Image from "next/image";
 // Local Data
 import data from "../data/portfolio.json";
 import { Parallax } from "react-scroll-parallax";
+import React from "react";
 
 export default function Home() {
-    // Ref
-    const projectRef = useRef()
+    // Refs for sections
+    const projectRef = useRef();
     const workRef = useRef();
     const aboutRef = useRef();
     const textOne = useRef();
     const textTwo = useRef();
 
-
-    // Handling Scroll using refs defined for each section
-    const handleProjectScroll = () => {
+    // Scroll handlers
+    const scrollToSection = (ref) => {
         window.scrollTo({
-            top: projectRef.current.offsetTop,
-            left: 0,
-            behavior: "smooth",
-        });
-    };
-    const handleWorkScroll = () => {
-        window.scrollTo({
-            top: workRef.current.offsetTop,
-            left: 0,
-            behavior: "smooth",
-        });
-    };
-
-    const handleAboutScroll = () => {
-        window.scrollTo({
-            top: aboutRef.current.offsetTop,
+            top: ref.current.offsetTop,
             left: 0,
             behavior: "smooth",
         });
@@ -47,147 +32,121 @@ export default function Home() {
 
     // Animation effect
     useIsomorphicLayoutEffect(() => {
-        stagger(
-            [
-                textOne.current,
-                textTwo.current
-            ],
-            { y: 30 },
-            { y: 0 }
-        );
+        stagger([textOne.current, textTwo.current], { y: 30 }, { y: 0 });
     }, []);
 
     return (
-        <>
-            {/* <Head>
+        <div>
+            <Head>
                 <title>{data.name}</title>
-                <script async src="https://www.googletagmanager.com/gtag/js?id=G-2N3FBN7X6J"></script>
-            </Head> */}
+                <meta name="description" content="Portfolio of Sam, a full stack engineer." />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
             <div>
-                <div className="container mx-auto">
-                    <Parallax speed={20}>
-                        <div className="bg-white/10 w-2/3 backdrop-blur-sm px-10 py-5 pb-10 mob:px-3 flex flex-row mt-36 mx-auto">
-                            <div className="mr-5 flex flex-col">
-                                <h1
-                                    ref={textOne}
-                                    className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 font-black underline w-4/5 mob:w-full laptop:w-4/5"
+                <Parallax speed={20}>
+                    <div className="bg-white/10 w-full backdrop-blur-sm px-20 py-5 pb-10 mob:px-3 flex flex-row justify-between mt-36 mx-auto container">
+                        <div className="flex flex-col">
+                            <h1
+                                ref={textOne}
+                                className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 font-black underline w-4/5 mob:w-full laptop:w-4/5"
+                            >
+                                Hey, I&apos;m Sam.
+                            </h1>
+                            <b className="flex-grow">
+                                <p
+                                    ref={textTwo}
+                                    className="text-3sm p-2"
                                 >
-                                    Hey, I&apos;m Sam.
-                                </h1>
-                                <b className="flex-grow">
-                                    <p
-                                        ref={textTwo}
-                                        className="text-3sm p-2"
-                                    >
-                                        A full stack engineer
-                                    </p>
-                                </b>
+                                    A full stack engineer
+                                </p>
+                            </b>
 
-                                <Socials className="relative bottom-0 mt-auto flex-none" />
-                            </div>
-                            <img
-                                className="h-72 bottom-[72px] border-4 border-white rounded-full shadow-lg"
-                                src="./images/profile-picture.jpeg"
+                            <Socials className="relative bottom-0 mt-auto flex-none" />
+                        </div>
+                        <div className="w-72 h-72">
+                            <Image
+                                className="shadow-lg rounded-full"
+                                src="/images/profile-picture.jpeg"
+                                alt="Profile Picture"
+                                width={288}
+                                height={288}
+                                objectFit="cover"
+                                priority
                             />
                         </div>
-                    </Parallax>
-                </div>
-                <Header
-                    handleProjectScroll={handleProjectScroll}
-                    handleWorkScroll={handleWorkScroll}
-                    handleAboutScroll={handleAboutScroll}
-                />
-                <div className="container mx-auto px-10 py-5 mb-10 mob:px-3">
-                    <div
-                        className="tablet:mt-20 desktop:mt-36 p-2 z-10 laptop:p-0 tablet:m-2 mob:mt-5 mob:w-full"
-                        ref={workRef}
-                    >
-                        <h1 className="text-4xl p-5 inline-block rounded-t-xl font-black bg-sky-500/10 backdrop-blur-sm text-sky-900">
-                            Professional Experience.
-                        </h1>
-                        <div className="laptop:px-12 bg-sky-500/10 backdrop-blur-sm grid grid-cols-1 laptop:grid-cols-2 mob:grid-cols-1 gap-5 rounded-3xl rounded-tl-none py-16 text-sky-800" style={{ marginLeft: "auto", marginRight: "auto" }}>
-                            {data.other_projects.map((service, index) => (
-                                <div className="mt-10 mob:mt-0 bg-white/40 rounded-xl"
-                                    key={index}>
-                                    <div className="w-full p-2 mob:p-4 rounded-lg transition-all ease-out duration-300">
-                                        <h1 className="text-3xl mob:text-2xl font-bold inline-block">{service.title}</h1>
-                                        <img
-                                            alt={service.title.split("@")[1]}
-                                            src={service.imageSrc}
-                                            className="w-10 h-10 rounded-full inline-block ml-2 transform -translate-y-[2px]"
-                                        />
-                                        <ul className="py-2 rounded-lg mt-1 text-md w-full opacity-80">
-                                            {service.description.map((point, index) => (<li className="mb-2" key={index}>{"• " + point}</li>))
-                                            }
-                                        </ul>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
                     </div>
-                    <div
-                        className="tablet:mt-20 desktop:mt-36 mx-0 p-2 z-10 laptop:p-0 tablet:m-2 mob:mt-5 mob:w-full"
-                        ref={projectRef}
-                        style={{ marginLeft: "auto", marginRight: "auto" }}
-                    >
-                        <h1 className="text-4xl bg-indigo-500/20 backdrop-blur-sm p-5 inline-block rounded-t-xl text-indigo-900"><b>Favorite projects.</b></h1>
-                        <div className="laptop:px-12 bg-indigo-500/20 backdrop-blur-sm rounded-3xl rounded-tl-none py-16">
-
-                            {/* url={"test"}
-                            desc={"test"}
-                            name={"Solana Snapshot"}
-                            description={"j"}
-                            /> */}
-                            <div className="laptop:px-12 grid grid-cols-2 rounded-b-3xl laptop:grid-cols-2 mob:grid-cols-1 gap-5 py-10 text-indigo-900">
-                                {data.projects.map((project) => (
-                                    <a href={project.url} rel="noreferrer" target="_blank" key={project.id}>
-
-                                        <WorkCard
-                                            img={project.imageSrc}
-                                            url={project.url}
-                                            desc={project.imageDesc}
-                                            name={project.title}
-                                            description={project.description}
-                                            embeddedUrl={project.embeddedUrl}
-                                        />
-                                    </a>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-
-                    <div
-                        className="mt-5 laptop:mt-20 tablet:mt-10 p-5 bg-teal-700 text-white rounded-2xl"
-                        ref={aboutRef}
-                    >
-                        <h1 className="tablet:my-1 text-4xl font-bold">About.</h1>
-                        <p>I attended Indiana University, where I majored in Software Engineering and minored in History. I&apos;m genuinely excited about continuing to explore the fascinating world of web development. In my free time, I love fishing, traveling to new places, and diving into sci-fi novels.</p>
-                        <div className="grid grid-cols-2">
-                            <div>
-                                <h1 className="mt-20 text-2xl font-bold">Languages and Technologies:</h1>
-                                <div className="mt-5 mob:mt-1 tablet:mb-10">
-                                    {data.languages.map((course, index) => (
-                                        <div className="my-1 courses p-1 bg-white/30 mr-2 rounded-md inline-block" key={index}>{course}</div>
-                                    ))}
-                                    {data.technologies.map((course, index) => (
-                                        <div className="my-1 courses p-1 bg-white/40 mr-2 rounded-md inline-block" key={index}>{course}</div>
-                                    ))}
-
-                                </div>
-                            </div>
-                            <div>
-                                <h1 className="tablet:mt-20 mob:mt-10 text-2xl font-bold">Coursework:</h1>
-                                <div className="mt-5 mob:mt-1 tablet:mb-10">
-                                    {data.courses.map((course, index) => (
-                                        <div className="my-1 courses p-1 bg-black/20 mr-2 rounded-md inline-block" key={index}>{course}</div>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <Footer />
-                </div>
+                </Parallax>
             </div>
-        </>
+            <Header
+                handleProjectScroll={() => scrollToSection(projectRef)}
+                handleWorkScroll={() => scrollToSection(workRef)}
+                handleAboutScroll={() => scrollToSection(aboutRef)}
+            />
+            <div className="mx-auto mt-16 py-5 mb-10">
+                <Section
+                    title="Professional Experience."
+                    ref={workRef}
+                    data={data.other_projects}
+                    bgColor="bg-sky-500/10"
+                    textColor="text-sky-900"
+                />
+                <Section
+                    title="Projects."
+                    ref={projectRef}
+                    data={data.projects}
+                    bgColor="bg-indigo-500/20"
+                    textColor="text-indigo-900"
+                />
+                <AboutSection ref={aboutRef} data={data} />
+                <Footer />
+            </div>
+        </div>
     );
 }
+
+
+const Section = React.forwardRef(({ title, data, bgColor, textColor }, ref) => (
+    <div>
+        <div className="container mx-auto mt-16 ">
+            <h1 className={`text-4xl inline-block rounded-t-xl font-black ${textColor}`}>
+                {title}
+            </h1>
+        </div>
+        <div className={`${bgColor} container mx-auto rounded-xl`} ref={ref}>
+            <div className={`backdrop-blur-sm grid grid-cols-1 laptop:grid-cols-2 mob:grid-cols-1 gap-5 p-8 ${textColor} rounded-xl`} style={{ marginLeft: "auto", marginRight: "auto" }}>
+                {data.map((item, index) => (
+                    <WorkCard key={index} data={item} />
+                ))}
+            </div>
+        </div>
+    </div>
+));
+
+const AboutSection = React.forwardRef(({ data }, ref) => (
+    <div className="mt-5 laptop:mt-20 tablet:mt-10 p-5 bg-teal-700 text-white rounded-2xl" ref={ref}>
+        <h1 className="tablet:my-1 text-4xl font-bold">About.</h1>
+        <p>I attended Indiana University, where I majored in Software Engineering and minored in History. I&apos;m genuinely excited about continuing to explore the fascinating world of web development. In my free time, I love fishing, traveling to new places, and diving into sci-fi novels.</p>
+        <div className="grid grid-cols-2">
+            <div>
+                <h1 className="mt-20 text-2xl font-bold">Languages and Technologies:</h1>
+                <div className="mt-5 mob:mt-1 tablet:mb-10">
+                    {data.languages.map((course, index) => (
+                        <div className="my-1 courses p-1 bg-white/30 mr-2 rounded-md inline-block" key={index}>{course}</div>
+                    ))}
+                    {data.technologies.map((course, index) => (
+                        <div className="my-1 courses p-1 bg-white/40 mr-2 rounded-md inline-block" key={index}>{course}</div>
+                    ))}
+
+                </div>
+            </div>
+            <div>
+                <h1 className="tablet:mt-20 mob:mt-10 text-2xl font-bold">Coursework:</h1>
+                <div className="mt-5 mob:mt-1 tablet:mb-10">
+                    {data.courses.map((course, index) => (
+                        <div className="my-1 courses p-1 bg-black/20 mr-2 rounded-md inline-block" key={index}>{course}</div>
+                    ))}
+                </div>
+            </div>
+        </div>
+    </div>
+));
