@@ -105,37 +105,28 @@ export default function Home() {
 }
 
 
-const Section = React.forwardRef(({ title, data, bgColor, textColor }, ref) => (
-    <div>
-        <div className="container mx-auto mt-16 ">
-            <h1 className={`text-4xl inline-block rounded-t-xl font-black ${textColor}`}>
-                {title}
-            </h1>
-        </div>
+const Section = React.forwardRef(({ title, data, bgColor, textColor }, ref) => {
+    return (
         <div className={`${bgColor} container mx-auto rounded-xl`} ref={ref}>
-            <div className={`backdrop-blur-sm grid grid-cols-1 laptop:grid-cols-2 mob:grid-cols-1 gap-5 p-8 ${textColor} rounded-xl`} style={{ marginLeft: "auto", marginRight: "auto" }}>
+            <div className={`backdrop-blur-sm grid grid-cols-1 laptop:grid-cols-4 mob:grid-cols-1 gap-5 p-8 ${textColor} rounded-xl`}>
                 {data.map((item, index) => (
-                    <WorkCard key={index} data={item} />
+                    <div key={index} className={`${index === 0 ? 'laptop:col-span-3' : ''}`}>
+                        <WorkCard data={item} />
+                    </div>
                 ))}
             </div>
         </div>
-    </div>
-));
+    );
+});
+Section.displayName = 'Section';
 
-const AboutSection = React.forwardRef(({ data }, ref) => (
-    //     <div className="container mx-auto mt-16 ">
-    //     <h1 className={`text-4xl inline-block rounded-t-xl font-black ${textColor}`}>
-    //         {title}
-    //     </h1>
-    // </div>
-    // <div className={`${bgColor} container mx-auto rounded-xl`} ref={ref}>
-    //     <div className={`backdrop-blur-sm grid grid-cols-1 laptop:grid-cols-2 mob:grid-cols-1 gap-5 p-8 ${textColor} rounded-xl`} style={{ marginLeft: "auto", marginRight: "auto" }}>
-    <div className="container mx-auto mt-16" ref={ref}>
-        <h1 className="tablet:my-1 text-4xl text-violet-700 font-bold">About.</h1>
-        <div className="bg-violet-700/80 rounded-xl text-white p-5">
-            <div>
-                <p>Software Engineer skilled in Java and TypeScript, with experience in building scalable distributed systems and RESTful APIs. Proficient in cloud services and automation using Kafka, Jenkins, and JPMC's Gaia Cloud. Strong collaborator focused on delivering high-quality, user-friendly solutions.</p>
-            </div>
+const AboutSection = React.forwardRef(({ data }, ref) => {
+    return (
+        <div className="mt-5 laptop:mt-20 tablet:mt-10 p-5 bg-teal-700 text-white rounded-2xl" ref={ref}>
+            <h1 className="tablet:my-1 text-4xl font-bold">About.</h1>
+            <p>
+                I attended Indiana University, where I majored in Software Engineering and minored in History. I&apos;m genuinely excited about continuing to explore the fascinating world of web development. In my free time, I love fishing, traveling to new places, and diving into sci-fi novels.
+            </p>
             <div className="grid grid-cols-2">
                 <div>
                     <h1 className="mt-20 text-2xl font-bold">Languages and Technologies:</h1>
@@ -165,5 +156,6 @@ const AboutSection = React.forwardRef(({ data }, ref) => (
                 </div>
             </div>
         </div>
-    </div>
-));
+    );
+});
+AboutSection.displayName = 'AboutSection';
