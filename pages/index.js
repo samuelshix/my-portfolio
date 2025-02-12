@@ -83,19 +83,19 @@ export default function Home() {
                 handleAboutScroll={() => scrollToSection(aboutRef)}
             />
             <div className="mx-auto mt-16 py-5 mb-10 container">
-                <Section
-                    title="Professional Experience."
-                    ref={workRef}
-                    data={data.other_projects}
-                    bgColor="bg-sky-500/10"
-                    textColor="text-sky-900"
-                />
-                <Section
+                <ProjectSection
                     title="Projects."
                     ref={projectRef}
                     data={data.projects}
                     bgColor="bg-indigo-500/20"
                     textColor="text-indigo-900"
+                />
+                <WorkSection
+                    title="Professional Experience."
+                    ref={workRef}
+                    data={data.other_projects}
+                    bgColor="bg-sky-500/10"
+                    textColor="text-sky-900"
                 />
                 <AboutSection ref={aboutRef} data={data} />
                 <Footer />
@@ -105,9 +105,35 @@ export default function Home() {
 }
 
 
-const Section = React.forwardRef(({ title, data, bgColor, textColor }, ref) => {
+const ProjectSection = React.forwardRef(({ title, data, bgColor, textColor }, ref) => {
     return (
         <div className={`${bgColor} container mx-auto rounded-xl mb-20`} ref={ref}>
+            <div className="relative p-5 rounded-t-xl">
+                <h1 className="text-5xl font-bold text-indigo-900">
+                    {title}
+                </h1>
+            </div>
+            <div className={`backdrop-blur-sm grid grid-cols-1 laptop:grid-cols-4 mob:grid-cols-1 gap-5 p-8 auto-rows-fr ${textColor} rounded-xl`}>
+                {data.map((item, index) => (
+                    <div key={index}
+                        className={`${index === 0 ? 'laptop:col-span-3' : 'laptop:col-span-1'}`}>
+                        <WorkCard data={item} />
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
+});
+ProjectSection.displayName = 'ProjectSection';
+
+const WorkSection = React.forwardRef(({ title, data, bgColor, textColor }, ref) => {
+    return (
+        <div className={`${bgColor} container mx-auto rounded-xl mb-20`} ref={ref}>
+            <div className="relative p-5 rounded-t-xl">
+                <h1 className="text-5xl font-bold text-sky-900">
+                    {title}
+                </h1>
+            </div>
             <div className={`backdrop-blur-sm grid grid-cols-1 laptop:grid-cols-4 mob:grid-cols-1 gap-5 p-8 ${textColor} rounded-xl`}>
                 {data.map((item, index) => (
                     <div key={index} className={`${index === 0 ? 'laptop:col-span-3' : ''}`}>
@@ -118,41 +144,55 @@ const Section = React.forwardRef(({ title, data, bgColor, textColor }, ref) => {
         </div>
     );
 });
-Section.displayName = 'Section';
-
+WorkSection.displayName = 'WorkSection';
 const AboutSection = React.forwardRef(({ data }, ref) => {
     return (
-        <div className="mt-5 laptop:mt-20 tablet:mt-10 p-5 bg-teal-700 text-white rounded-2xl" ref={ref}>
-            <div className="bg-white/30 m-5 p-5 rounded-xl">
-                <h1 className="tablet:my-1 text-4xl font-bold">About.</h1>
-                <p>
-                    I attended Indiana University, where I majored in Software Engineering and minored in History. I&apos;m genuinely excited about continuing to explore the fascinating world of web development. In my free time, I love fishing, traveling to new places, and diving into sci-fi novels.
-                </p>
-                <div className="grid grid-cols-2">
-                    <div>
-                        <h1 className="mt-20 text-2xl font-bold">Languages and Technologies:</h1>
-                        <div className="mt-5 mob:mt-1 tablet:mb-10">
-                            {data.languages.map((course, index) => (
-                                <div className="my-1 courses p-1 bg-white/30 mr-2 rounded-md inline-block" key={index}>{course}</div>
-                            ))}
-                            {data.technologies.map((course, index) => (
-                                <div className="my-1 courses p-1 bg-white/40 mr-2 rounded-md inline-block" key={index}>{course}</div>
-                            ))}
+        <div className="mt-5 laptop:mt-20 tablet:mt-10 p-5 bg-gradient-to-br from-teal-700 to-teal-800 text-white rounded-2xl shadow-xl" ref={ref}>
+            <div className="bg-white/10 backdrop-blur-sm m-5 p-8 rounded-xl border border-white/10 shadow-inner">
+                {/* Header Section */}
+                <div className="max-w-3xl mb-12">
+                    <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-teal-100 bg-clip-text text-transparent">About.</h1>
+                    <p className="text-lg leading-relaxed text-teal-50">
+                        I attended Indiana University, where I majored in Software Engineering and minored in History. I&apos;m genuinely excited about continuing to explore the fascinating world of web development. In my free time, I love fishing, traveling to new places, and diving into sci-fi novels.
+                    </p>
+                </div>
 
+                {/* Skills Grid */}
+                <div className="grid grid-cols-1 laptop:grid-cols-2 gap-10">
+                    {/* Languages and Technologies */}
+                    <div className="space-y-6">
+                        <h2 className="text-2xl font-semibold text-teal-100">Languages & Technologies</h2>
+                        <div className="flex flex-wrap gap-2">
+                            {data.languages.map((lang, index) => (
+                                <span key={index} className="px-3 py-1.5 bg-teal-600/30 hover:bg-teal-600/40 transition-colors rounded-lg text-sm font-medium">
+                                    {lang}
+                                </span>
+                            ))}
+                            {data.technologies.map((tech, index) => (
+                                <span key={index} className="px-3 py-1.5 bg-teal-500/20 hover:bg-teal-500/30 transition-colors rounded-lg text-sm font-medium">
+                                    {tech}
+                                </span>
+                            ))}
                         </div>
                     </div>
-                    <div>
-                        <h1 className="tablet:mt-20 mob:mt-10 text-2xl font-bold">Coursework:</h1>
-                        <div className="mt-5 mob:mt-1 tablet:mb-10">
+
+                    {/* Coursework */}
+                    <div className="space-y-6">
+                        <h2 className="text-2xl font-semibold text-teal-100">Coursework</h2>
+                        <div className="flex flex-wrap gap-2">
                             {data.courses.map((course, index) => (
-                                <div className="my-1 courses p-1 bg-black/20 mr-2 rounded-md inline-block" key={index}>{course}</div>
+                                <span key={index} className="px-3 py-1.5 bg-white/10 hover:bg-white/15 transition-colors rounded-lg text-sm font-medium">
+                                    {course}
+                                </span>
                             ))}
                         </div>
                     </div>
                 </div>
-                <div className="rounded-2xl mt-10">
-                    <h1 className="text-2xl font-bold">Contact.</h1>
-                    <div className="mt-3">
+
+                {/* Contact Section */}
+                <div className="mt-12 pt-8 border-t border-white/10">
+                    <h2 className="text-2xl font-semibold text-teal-100 mb-4">Contact</h2>
+                    <div className="bg-white/5 p-4 rounded-xl">
                         <Socials />
                     </div>
                 </div>

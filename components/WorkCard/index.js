@@ -13,46 +13,54 @@ const WorkCard = ({ data }) => {
         images = null;
     }
 
+    const handleClick = () => {
+        if (data.url) {
+            window.open(data.url, '_blank', 'noopener,noreferrer');
+        }
+    };
+
     return (
-        <div className="overflow-hidden rounded-lg bg-white/50 p-2 top-0 laptop:p-4 first:ml-0">
-            <div className="flex flex-row justify-between">
+        <div className="h-full flex flex-col rounded-lg bg-white/50 p-2 laptop:p-4">
+            <div className="flex flex-row justify-between items-center mb-2">
                 <h1 className="text-2xl font-medium">
                     {data.title || "Project Name"}
                 </h1>
-                {images === "THUMBNAIL" ? (<img src={data.imageSrc} alt={data.title} className="w-10 h-10" />) : null}
+                {images === "THUMBNAIL" ? (
+                    <img src={data.imageSrc} alt={data.title} className="w-10 h-10" />
+                ) : null}
             </div>
-            <h2 className="text-md opacity-80">
+
+            <h2 className="text-md opacity-80 mb-2">
                 {Array.isArray(data.description)
                     ? data.description.join(' • ')
                     : data.description
                 }
             </h2>
 
-
-            {data.url && (
-                <div>
-                    <a href={data.url} target="_blank" rel="noreferrer">Project Link</a>
-                </div>
-            )}
-
-            <div>
-                {/* {images.length > 1 ? (
-                    <Carousel className="overflow-hidden rounded-lg transition-all ease-out h-48 mob:h-auto">
-                        {images}
-                    </Carousel>
-                ) : (
-                    images[0] || <p>No images available</p>
-                )} */}
-                {
-                    images === "PROJECT_IMAGE" ? (<img src={data.imageSrc[0]} alt={data.title} className="w-full h-full object-cover max-h-96" />) : null
-                }
-
-
-            </div>
-            <div>
-                {data.embeddedUrl && (
-                    <iframe className="w-full" height="315" src={data.embeddedUrl}></iframe>
-                )}
+            <div className="flex-grow">
+                {images === "PROJECT_IMAGE" && data.url ? (
+                    <div
+                        onClick={handleClick}
+                        className="relative w-full h-full cursor-pointer group"
+                    >
+                        <img
+                            src={data.imageSrc[0]}
+                            alt={data.title}
+                            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+                        />
+                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
+                            <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white font-medium">
+                                View Project →
+                            </span>
+                        </div>
+                    </div>
+                ) : data.embeddedUrl ? (
+                    <iframe
+                        className="w-full h-full"
+                        src={data.embeddedUrl}
+                        title={data.title}
+                    />
+                ) : null}
             </div>
         </div>
     );
