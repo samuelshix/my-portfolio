@@ -14,10 +14,9 @@ const Header = ({ handleProjectScroll, handleWorkScroll, handleAboutScroll }) =>
 
     const renderButtons = () => (
         <>
-            <Button onClick={handleWorkScroll}>Work</Button>
             <Button onClick={handleProjectScroll}>Projects</Button>
+            <Button onClick={handleWorkScroll}>Work</Button>
             <Button onClick={handleAboutScroll}>About</Button>
-            <Button onClick={() => window.open("mailto:samuel.li.shi@gmail.com")}>Contact</Button>
         </>
     );
 
@@ -43,7 +42,7 @@ const Header = ({ handleProjectScroll, handleWorkScroll, handleAboutScroll }) =>
                 )}
             </Popover>
 
-            <div className="sticky top-0 bg-gradient-to-r from-sky-500/10 to-indigo-500/20 py-2 z-50 hidden tablet:flex header rounded-xl">
+            <div className="sticky top-0 bg-gradient-to-r from-white/5 to-white/10 py-2 z-50 hidden tablet:flex header rounded-xl">
                 <div className="flex flex-row items-center justify-between container mx-auto px-10">
                     <Button type="primary">
                         <h1 onClick={() => handleNavigation("/")} className="font-medium cursor-pointer mob:p-2 laptop:p-0">

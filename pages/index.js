@@ -44,18 +44,18 @@ export default function Home() {
             </Head>
             <div>
                 <Parallax speed={20}>
-                    <div className="bg-white/10 w-full backdrop-blur-sm px-20 py-5 pb-10 mob:px-3 flex flex-row justify-between mt-36 mx-auto container">
-                        <div className="flex flex-col">
+                    <div className="w-full backdrop-blur-[2px] flex flex-row justify-between my-36 mx-auto container text-white outline outline-2 outline-white/40 rounded-xl p-12 shadow-lg shadow-yellow-100/50">
+                        <div className="flex flex-col ">
                             <h1
                                 ref={textOne}
-                                className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 font-black underline w-4/5 mob:w-full laptop:w-4/5"
+                                className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl font-light w-auto mob:w-full laptop:w-4/5 mb-1 text-yellow-100"
                             >
-                                Hey, I&apos;m Sam.
+                                Samuel Shi.
                             </h1>
-                            <b className="flex-grow">
+                            <b className="">
                                 <p
                                     ref={textTwo}
-                                    className="text-3sm p-2"
+                                    className="text-sm mb-10"
                                 >
                                     A full stack engineer
                                 </p>
@@ -63,7 +63,7 @@ export default function Home() {
 
                             <Socials className="relative bottom-0 mt-auto flex-none" />
                         </div>
-                        <div className="w-72 h-72">
+                        <div className="my-auto">
                             <Image
                                 className="shadow-lg rounded-full"
                                 src="/images/profile-picture.jpeg"
@@ -87,15 +87,15 @@ export default function Home() {
                     title="Projects."
                     ref={projectRef}
                     data={data.projects}
-                    bgColor="bg-indigo-500/20"
-                    textColor="text-indigo-900"
+                    bgColor="bg-black/10"
+                    textColor="text-white"
                 />
                 <WorkSection
                     title="Professional Experience."
                     ref={workRef}
                     data={data.other_projects}
-                    bgColor="bg-sky-500/10"
-                    textColor="text-sky-900"
+                    bgColor="bg-black/10"
+                    textColor="text-white"
                 />
                 <AboutSection ref={aboutRef} data={data} />
                 <Footer />
@@ -107,13 +107,13 @@ export default function Home() {
 
 const ProjectSection = React.forwardRef(({ title, data, bgColor, textColor }, ref) => {
     return (
-        <div className={`${bgColor} container mx-auto rounded-xl mb-20`} ref={ref}>
-            <div className="relative p-5 rounded-t-xl">
-                <h1 className="text-5xl font-bold text-indigo-900">
+        <div className={`${bgColor} container mx-auto backdrop-blur-sm gradient-to-r from-black/10 to-black rounded-xl mb-20 p-10`} ref={ref}>
+            <div className="relative ml-7">
+                <h1 className="text-5xl font-bold text-white bg-gradient-to-r from-yellow-100 to-yellow-500 bg-clip-text text-transparent">
                     {title}
                 </h1>
             </div>
-            <div className={`backdrop-blur-sm grid grid-cols-1 laptop:grid-cols-4 mob:grid-cols-1 gap-5 p-8 auto-rows-fr ${textColor} rounded-xl`}>
+            <div className={`grid grid-cols-1 laptop:grid-cols-4 mob:grid-cols-1 gap-5 p-8 auto-rows-fr ${textColor} rounded-xl`}>
                 {data.map((item, index) => (
                     <div key={index}
                         className={`${index === 0 ? 'laptop:col-span-3' : 'laptop:col-span-1'}`}>
@@ -128,13 +128,13 @@ ProjectSection.displayName = 'ProjectSection';
 
 const WorkSection = React.forwardRef(({ title, data, bgColor, textColor }, ref) => {
     return (
-        <div className={`${bgColor} container mx-auto rounded-xl mb-20`} ref={ref}>
-            <div className="relative p-5 rounded-t-xl">
-                <h1 className="text-5xl font-bold text-sky-900">
+        <div className={`${bgColor} container mx-auto backdrop-blur-sm gradient-to-r from-black/10 to-black rounded-xl mb-36 p-10`} ref={ref}>
+            <div className="relative ml-7">
+                <h1 className="text-5xl font-bold text-white bg-gradient-to-r from-yellow-100 to-yellow-500 bg-clip-text text-transparent">
                     {title}
                 </h1>
             </div>
-            <div className={`backdrop-blur-sm grid grid-cols-1 laptop:grid-cols-4 mob:grid-cols-1 gap-5 p-8 ${textColor} rounded-xl`}>
+            <div className={`grid grid-cols-1 laptop:grid-cols-4 mob:grid-cols-1 gap-5 p-8 ${textColor} rounded-xl`}>
                 {data.map((item, index) => (
                     <div key={index} className={`${index === 0 ? 'laptop:col-span-3' : ''}`}>
                         <WorkCard data={item} />
@@ -147,29 +147,29 @@ const WorkSection = React.forwardRef(({ title, data, bgColor, textColor }, ref) 
 WorkSection.displayName = 'WorkSection';
 const AboutSection = React.forwardRef(({ data }, ref) => {
     return (
-        <div className="mt-5 laptop:mt-20 tablet:mt-10 p-5 bg-gradient-to-br from-teal-700 to-teal-800 text-white rounded-2xl shadow-xl" ref={ref}>
-            <div className="bg-white/10 backdrop-blur-sm m-5 p-8 rounded-xl border border-white/10 shadow-inner">
+        <div className="mt-5 laptop:mt-20 tablet:mt-10 p-5 bg-gradient-to-br from-yellow-900/5 to-yellow-900/10 text-white rounded-2xl shadow-xl backdrop-blur-sm " ref={ref}>
+            <div className="m-5 p-10 rounded-xl">
                 {/* Header Section */}
-                <div className="max-w-3xl mb-12">
-                    <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-teal-100 bg-clip-text text-transparent">About.</h1>
-                    <p className="text-lg leading-relaxed text-teal-50">
-                        I attended Indiana University, where I majored in Software Engineering and minored in History. I&apos;m genuinely excited about continuing to explore the fascinating world of web development. In my free time, I love fishing, traveling to new places, and diving into sci-fi novels.
+                <div className="max-w-3xl mb-12 outline-5 outline-white rounded-xl border border-white/20 p-5">
+                    <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-yellow-100 to-yellow-500 bg-clip-text text-transparent">About.</h1>
+                    <p className="text-lg leading-relaxed text-white">
+                        I am a Software Engineer 2 at JP Morgan Chase, where I work on dispute resolution. If I have spare time, I enjoy working on web3/blockchain projects. I love fishing, traveling, and sci-fi novels.
                     </p>
                 </div>
 
                 {/* Skills Grid */}
                 <div className="grid grid-cols-1 laptop:grid-cols-2 gap-10">
                     {/* Languages and Technologies */}
-                    <div className="space-y-6">
-                        <h2 className="text-2xl font-semibold text-teal-100">Languages & Technologies</h2>
+                    <div className="space-y-6 outline-white rounded-xl border border-white/20 p-5">
+                        <h2 className="text-2xl font-semibold text-yellow-100">Languages & Technologies</h2>
                         <div className="flex flex-wrap gap-2">
                             {data.languages.map((lang, index) => (
-                                <span key={index} className="px-3 py-1.5 bg-teal-600/30 hover:bg-teal-600/40 transition-colors rounded-lg text-sm font-medium">
+                                <span key={index} className="px-3 py-1.5 bg-yellow-500/40 hover:bg-yellow-500/50 hover:text-white hover:pointer transition-colors rounded-lg text-sm font-medium">
                                     {lang}
                                 </span>
                             ))}
                             {data.technologies.map((tech, index) => (
-                                <span key={index} className="px-3 py-1.5 bg-teal-500/20 hover:bg-teal-500/30 transition-colors rounded-lg text-sm font-medium">
+                                <span key={index} className="px-3 py-1.5 bg-yellow-500/20 hover:bg-yellow-500/30 hover:text-white hover:pointer transition-colors rounded-lg text-sm font-medium">
                                     {tech}
                                 </span>
                             ))}
@@ -177,11 +177,11 @@ const AboutSection = React.forwardRef(({ data }, ref) => {
                     </div>
 
                     {/* Coursework */}
-                    <div className="space-y-6">
-                        <h2 className="text-2xl font-semibold text-teal-100">Coursework</h2>
+                    <div className="space-y-6 outline-white rounded-xl border border-white/10 p-5">
+                        <h2 className="text-2xl font-semibold text-yellow-100">Coursework</h2>
                         <div className="flex flex-wrap gap-2">
                             {data.courses.map((course, index) => (
-                                <span key={index} className="px-3 py-1.5 bg-white/10 hover:bg-white/15 transition-colors rounded-lg text-sm font-medium">
+                                <span key={index} className="px-3 py-1.5 bg-yellow-500/20 rounded-lg text-sm font-medium">
                                     {course}
                                 </span>
                             ))}
@@ -190,9 +190,9 @@ const AboutSection = React.forwardRef(({ data }, ref) => {
                 </div>
 
                 {/* Contact Section */}
-                <div className="mt-12 pt-8 border-t border-white/10">
-                    <h2 className="text-2xl font-semibold text-teal-100 mb-4">Contact</h2>
-                    <div className="bg-white/5 p-4 rounded-xl">
+                <div className="mt-12 pt-8 border-t border-white/30 outline-white rounded-xl border border-white/10 p-5">
+                    <h2 className="text-2xl font-semibold shadow-lg mb-4">Contact</h2>
+                    <div className="rounded-xl">
                         <Socials />
                     </div>
                 </div>

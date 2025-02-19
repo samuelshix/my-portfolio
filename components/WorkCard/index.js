@@ -20,7 +20,7 @@ const WorkCard = ({ data }) => {
     };
 
     return (
-        <div className="h-full flex flex-col rounded-lg bg-white/50 p-2 laptop:p-4">
+        <div className="h-full flex flex-col rounded-lg bg-white/10 p-2 laptop:p-4 shadow-lg shadow-yellow-100/10 hover:shadow-lg hover:shadow-yellow-100/70 transition-all duration-300">
             <div className="flex flex-row justify-between items-center mb-2">
                 <h1 className="text-2xl font-medium">
                     {data.title || "Project Name"}
