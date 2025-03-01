@@ -39,7 +39,7 @@ export default function Home() {
             </Head>
             <div>
                 <Parallax speed={50}>
-                    <div className="w-full backdrop-blur-[2px] flex flex-row justify-left mt-36 mb-72 mx-auto container p-12">
+                    <div className="w-full backdrop-blur-[2px] flex flex-row justify-left mt-[30vh] mb-36 mx-auto container p-12">
                         <div className="flex flex-col ">
                             <div className="relative flex z-10">
                                 {/* Text Container */}
