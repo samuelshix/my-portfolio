@@ -1,6 +1,6 @@
 import { ParallaxProvider } from "react-scroll-parallax";
 import "../styles/globals.css";
-
+import useBackgroundAnimation from "../animations";
 const App = ({ Component, pageProps }) => {
   return (
     <ParallaxProvider>
@@ -27,7 +27,7 @@ const App = ({ Component, pageProps }) => {
         </div>
       </div>
       <Component {...pageProps} />
-
+      {/* <useBackgroundAnimation /> */}
     </ParallaxProvider>);
 };
 
