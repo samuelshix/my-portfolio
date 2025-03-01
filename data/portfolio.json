@@ -270,19 +270,23 @@
         "Python"
     ],
     "technologies": [
-        "Java Spring",
+        "Spring Boot",
         "React",
         "Kafka",
+        "Maven",
+        "Oracle DB",
+        "Postgres",
+        "Gaia Cloud",
+        "AWS ECS",
+        "AWS CloudWatch",
+        "Terraform",
+        "Spinnaker",
+        "Jenkins CI/CD",
+        "Selenium",
         "JUnit",
         "Jest",
         "NodeJS",
-        "Splunk",
         "SQL",
-        "React",
-        "jQuery",
-        "Django",
-        "Django REST",
-        "Git",
-        "ChartJS"
+        "Django REST"
     ]
 }
