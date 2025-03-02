@@ -48,10 +48,7 @@ export default function Home() {
                                         ref={textOne}
                                         data-text="Samuel Shi"
                                         className="text-9xl font-light 
-                                        text-white relative
-                                        before:content-[attr(data-text)] before:absolute before:inset-0 
-                                        before:text-shadow-[0_0_5px_#FFD700,0_0_5px_#FFA500]
-                                        [text-shadow:_0_0_10px_#FFD700,_0_0_10px_#FFA500,_0_0_30px_#FF8C00]"
+                                        text-white"
                                     >
                                         Samuel Shi
                                     </h1>
