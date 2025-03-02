@@ -19,7 +19,8 @@
     "projects": [
         {
             "title": "Portfolio Snapshot",
-            "description": [
+            "description": "A full-stack application that tracks token balances and prices for Solana wallets, providing historical price data and portfolio management capabilities (in progress)",
+            "skills": [
                 "React",
                 "TypeScript",
                 "NodeJS",
@@ -36,8 +37,23 @@
             "url": "https://github.com/samuelshix/portfolio-snapshot"
         },
         {
+            "title": "@solana-api-toolkit",
+            "description": "A collection of TypeScript packages that provide a unified interface for interacting with common 3rd party APIs, including a feature-rich token data service with multi-provider support, automatic fallbacks, and caching.",
+            "skills": [
+                "Typescript",
+                "API Fault Patterns",
+                "Jest",
+                "Solana APIs",
+                "NodeJS",
+                "Vercel"
+            ],
+            "imageSrc": [],
+            "url": "https://www.npmjs.com/package/@solana-api-toolkit/token-service"
+        },
+        {
             "title": "EasyRead for WaPo",
-            "description": [
+            "description": "A Chrome extension that uses OpenAI's API to simplify or translate Washington Post news article text, improving readability and accessibility based on user preference. Completed as part of Washington Post intern hackathon.",
+            "skills": [
                 "JavaScript",
                 "HTML",
                 "CSS",
@@ -51,7 +67,8 @@
         },
         {
             "title": "Kashflows",
-            "description": [
+            "description": "A tool that builds a web of transaction flows stemming from a wallet address, using recursive API calls to query the blockchain.",
+            "skills": [
                 "React",
                 "Django REST",
                 "ReactFlow",
@@ -72,14 +89,15 @@
             "url": "https://kashflows.vercel.app/"
         },
         {
-            "title": "Solana Snapshot",
-            "description": [
+            "title": "Portfolio Snapshot (v1)",
+            "description": "A tool that generates an NFT of a user's portfolio performance.",
+            "skills": [
                 "NextJS",
                 "Web3.js",
                 "NodeJS",
                 "Prisma",
-                "Solana APIs",
-                "NFT Generation APIs"
+                "Helius API",
+                "GenesysGo Storage"
             ],
             "imageSrc": [],
             "imageDesc": [],
@@ -87,7 +105,8 @@
         },
         {
             "title": "Crypto Threads",
-            "description": [
+            "description": "A tool that aggregates Reddit comments and Tweets for multiple cryptocurrencies for a specific date, allowing users to get a sense of market sentiment among top social media posts.",
+            "skills": [
                 "jQuery",
                 "AJAX",
                 "ChartJS",
@@ -113,9 +132,11 @@
         },
         {
             "title": "2022 Live Elections Dashboard",
-            "description": [
+            "description": "An elections dashboard containing real-time vote count updates for the 2022 midterms, for Monroe County Indiana, featuring 30 elections and referendums.",
+            "skills": [
                 "Sheetrocks",
                 "ChartJS",
+                "JavaScript",
                 "jQuery"
             ],
             "imageSrc": [
@@ -127,24 +148,9 @@
             "url": "https://specials.idsnews.com/live-election-update-monroe-county-2022/"
         },
         {
-            "title": "Heatmaps",
-            "description": [
-                "React",
-                "ChartJS",
-                "ChromaJS",
-                "Vercel"
-            ],
-            "imageSrc": [
-                "https://i.postimg.cc/3JgdBkhs/Heatmaps.png"
-            ],
-            "imageDesc": [
-                "Investing tool which adapts popular 200 WMA Bitcoin heatmap indicator for 13,420 other cryptocurrencies. Dynamically loads moving average timeframe based on total history. Technologies used: ReactJS, ChartJS, ChromaJS. Heroku/Vercel"
-            ],
-            "url": "https://heatmaps.vercel.app/"
-        },
-        {
-            "title": "Voting Quiz Buildout 2022",
-            "description": [
+            "title": "Interactive Voting Quiz 2022",
+            "description": "New and improved interactive voting quiz from the 2020 version, for 2022 midterms to educate voters on their options, given their circumstances.",
+            "skills": [
                 "HTML",
                 "CSS",
                 "JavaScript",
@@ -159,23 +165,8 @@
             ]
         },
         {
-            "title": "Voting Quiz Buildout 2020",
-            "description": [
-                "HTML",
-                "CSS",
-                "JavaScript"
-            ],
-            "imageSrc": [
-                "./images/voting.png"
-            ],
-            "url": "http://specials.idsnews.com/monroe-county-indiana-how-to-vote/",
-            "imageDesc": [
-                "Interactive voting quiz for 2020 election to educate voters, my first meaningful coding project!"
-            ]
-        },
-        {
-            "title": "Hope Church Allegations Buildout",
-            "description": [
+            "title": "Hope Church Buildout",
+            "skills": [
                 "HTML",
                 "CSS",
                 "JavaScript",
@@ -188,6 +179,19 @@
             "imageDesc": [
                 "Coded website for breaking story covering abuse by local pastor, including an interactive timeline for the events unfolding in the story"
             ]
+        },
+        {
+            "title": "Interactive Voting Quiz 2020",
+            "description": "An interactive voting quiz for 2020 election to educate voters, my first meaningful coding project!",
+            "skills": [
+                "HTML",
+                "CSS",
+                "JavaScript"
+            ],
+            "imageSrc": [
+                "./images/voting.png"
+            ],
+            "url": "http://specials.idsnews.com/monroe-county-indiana-how-to-vote/"
         }
     ],
     "other_rel_projects": [],

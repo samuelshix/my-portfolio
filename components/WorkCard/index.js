@@ -30,13 +30,15 @@ const WorkCard = ({ data }) => {
                 ) : null}
             </div>
 
-            <h2 className="text-md opacity-80 mb-2">
-                {Array.isArray(data.description)
-                    ? data.description.join(' • ')
-                    : data.description
+            <p className="text-sm opacity-80 font-light mb-2">
+                {data.description}
+            </p>
+            <p className="text-sm opacity-80 mb-2">
+                {Array.isArray(data.skills)
+                    ? data.skills.join(' • ')
+                    : data.skills
                 }
-            </h2>
-
+            </p>
             <div className="flex-grow">
                 {images === "PROJECT_IMAGE" && data.url ? (
                     <div

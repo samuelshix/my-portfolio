@@ -105,7 +105,7 @@ export default function Home() {
                 <Footer />
             </div>
             <p className="font-light z-[-1] bottom-5 left-5 fixed text-white text-xs">
-                Credits to <a href="https://github.com/baunov/gradients-bg/tree/main" className="underline">Danil Baunov</a> for the animated background</p>
+                Credits to <a href="https://github.com/baunov/gradients-bg/tree/main" className="underline">Danil Baunov</a> for animations</p>
         </div>
     );
 }
