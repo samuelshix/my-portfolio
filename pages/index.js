@@ -81,7 +81,7 @@ export default function Home() {
                                         </p>
                                         <div className="my-auto">
                                             <Image
-                                                className="shadow-lg rounded-full opacity-80"
+                                                className="shadow-lg rounded-full object-cover opacity-80"
                                                 src="/images/profile-picture.jpeg"
                                                 alt="Profile Picture"
                                                 width={288}
