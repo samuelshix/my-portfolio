@@ -22,9 +22,7 @@ const useBackgroundAnimation = () => {
         curX += (tgX - curX) / 20;
         curY += (tgY - curY) / 20;
         interBubble.style.transform = `translate(${Math.round(curX)}px, ${Math.round(curY)}px)`;
-        requestAnimationFrame(() => {
-          move();
-        });
+        requestAnimationFrame(move);
       }
 
       window.addEventListener('mousemove', (event) => {

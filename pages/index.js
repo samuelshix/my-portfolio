@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useEffect, useState } from "react";
 import Header from "../components/Header";
 import Socials from "../components/Socials";
 import WorkCard from "../components/WorkCard";
@@ -20,6 +20,8 @@ export default function Home() {
     const aboutRef = useRef();
     const textOne = useRef();
     const textTwo = useRef();
+    const [isVisible, setIsVisible] = useState(false);
+    const animatedSectionRef = useRef();
 
     // Scroll handlers
     const scrollToSection = (ref) => {
@@ -30,6 +32,25 @@ export default function Home() {
         });
     };
 
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                setIsVisible(entry.isIntersecting);
+            },
+            { threshold: 0.1 }
+        );
+
+        if (animatedSectionRef.current) {
+            observer.observe(animatedSectionRef.current);
+        }
+
+        return () => {
+            if (animatedSectionRef.current) {
+                observer.unobserve(animatedSectionRef.current);
+            }
+        };
+    }, []);
+
     return (
         <div >
             <Head>
@@ -38,7 +59,7 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <div>
-                <Parallax speed={50}>
+                <Parallax speed={20} translateY={[0, 30]} className="will-change-transform">
                     <div className="w-full backdrop-blur-[2px] flex flex-row justify-left mt-[30vh] mb-36 mx-auto container p-12">
                         <div className="flex flex-col ">
                             <div className="relative flex z-10">
@@ -65,7 +86,8 @@ export default function Home() {
                                                 alt="Profile Picture"
                                                 width={288}
                                                 height={288}
-                                                objectFit="cover"
+                                                placeholder="blur"
+                                                blurDataURL="data:image/jpeg;base64,..."
                                                 priority
                                             />
                                         </div>
